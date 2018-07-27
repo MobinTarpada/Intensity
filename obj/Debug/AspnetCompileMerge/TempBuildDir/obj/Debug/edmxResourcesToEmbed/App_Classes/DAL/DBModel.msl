@@ -1,0 +1,1852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FitnessCenterModelStoreContainer" CdmEntityContainer="FitnessCenterEntities">
+    <EntitySetMapping Name="AccessMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.AccessMaster">
+        <MappingFragment StoreEntitySet="AccessMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="pageId" ColumnName="pageId" />
+          <ScalarProperty Name="updateBy" ColumnName="updateBy" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadAppointments">
+      <EntityTypeMapping TypeName="FitnessCenterModel.LeadAppointment">
+        <MappingFragment StoreEntitySet="LeadAppointments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="appointmentDate" ColumnName="appointmentDate" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="isAttendAppointment" ColumnName="isAttendAppointment" />
+          <ScalarProperty Name="reasonForNotAttend" ColumnName="reasonForNotAttend" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadQuestionAnswers">
+      <EntityTypeMapping TypeName="FitnessCenterModel.LeadQuestionAnswer">
+        <MappingFragment StoreEntitySet="LeadQuestionAnswers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="questionId" ColumnName="questionId" />
+          <ScalarProperty Name="optionId" ColumnName="optionId" />
+          <ScalarProperty Name="answerText" ColumnName="answerText" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadQuestionOptions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.LeadQuestionOption">
+        <MappingFragment StoreEntitySet="LeadQuestionOptions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="options" ColumnName="options" />
+          <ScalarProperty Name="questionId" ColumnName="questionId" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadQuestionsMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.LeadQuestionsMaster">
+        <MappingFragment StoreEntitySet="LeadQuestionsMaster">
+          <ScalarProperty Name="SuperQuestionId" ColumnName="SuperQuestionId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="questions" ColumnName="questions" />
+          <ScalarProperty Name="questionTypeId" ColumnName="questionTypeId" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="OptionId" ColumnName="OptionId" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadStatusMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.LeadStatusMaster">
+        <MappingFragment StoreEntitySet="LeadStatusMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadTypeMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.LeadTypeMaster">
+        <MappingFragment StoreEntitySet="LeadTypeMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="leadType" ColumnName="leadType" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTargets">
+      <EntityTypeMapping TypeName="FitnessCenterModel.UserTarget">
+        <MappingFragment StoreEntitySet="UserTargets">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="targetUpdateBy" ColumnName="targetUpdateBy" />
+          <ScalarProperty Name="targetBy" ColumnName="targetBy" />
+          <ScalarProperty Name="toDate" ColumnName="toDate" />
+          <ScalarProperty Name="fromDate" ColumnName="fromDate" />
+          <ScalarProperty Name="target" ColumnName="target" />
+          <ScalarProperty Name="leadTypeId" ColumnName="leadTypeId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PageMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.PageMaster">
+        <MappingFragment StoreEntitySet="PageMaster">
+          <ScalarProperty Name="moduleId" ColumnName="moduleId" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="MenuLICSSClass" ColumnName="MenuLICSSClass" />
+          <ScalarProperty Name="MenuLI" ColumnName="MenuLI" />
+          <ScalarProperty Name="pageURL" ColumnName="pageURL" />
+          <ScalarProperty Name="pageName" ColumnName="pageName" />
+          <ScalarProperty Name="pageCategoryId" ColumnName="pageCategoryId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetPagePermissions" FunctionName="FitnessCenterModel.Store.GetPagePermissions">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetPagePermissions_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="pageCategoryId" ColumnName="pageCategoryId" />
+          <ScalarProperty Name="pageName" ColumnName="pageName" />
+          <ScalarProperty Name="pageURL" ColumnName="pageURL" />
+          <ScalarProperty Name="MenuLI" ColumnName="MenuLI" />
+          <ScalarProperty Name="MenuLICSSClass" ColumnName="MenuLICSSClass" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isPermission" ColumnName="isPermission" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="LeadTransactions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.LeadTransaction">
+        <MappingFragment StoreEntitySet="LeadTransactions">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="prevLeadStatusId" ColumnName="prevLeadStatusId" />
+          <ScalarProperty Name="currantLeadStatusId" ColumnName="currantLeadStatusId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadPresentations">
+      <EntityTypeMapping TypeName="FitnessCenterModel.LeadPresentation">
+        <MappingFragment StoreEntitySet="LeadPresentations">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="reasonsForNotAttend" ColumnName="reasonsForNotAttend" />
+          <ScalarProperty Name="isAttendPresentation" ColumnName="isAttendPresentation" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="appointmentId" ColumnName="appointmentId" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="presentationDate" ColumnName="presentationDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clubs">
+      <EntityTypeMapping TypeName="FitnessCenterModel.Club">
+        <MappingFragment StoreEntitySet="Clubs">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="clubName" ColumnName="clubName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetLeadTypes" FunctionName="FitnessCenterModel.Store.GetLeadTypes" />
+    <FunctionImportMapping FunctionImportName="GetUserTargetsByUserId" FunctionName="FitnessCenterModel.Store.GetUserTargetsByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetUserTargetsByUserId_Result">
+          <ScalarProperty Name="leadTypeId" ColumnName="leadTypeId" />
+          <ScalarProperty Name="CNT" ColumnName="CNT" />
+          <ScalarProperty Name="fromDate" ColumnName="fromDate" />
+          <ScalarProperty Name="toDate" ColumnName="toDate" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="leadType" ColumnName="leadType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="FitnessCenterModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="userTypeId" ColumnName="userTypeId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="mobileNumber" ColumnName="mobileNumber" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetUsers" FunctionName="FitnessCenterModel.Store.GetUsers" />
+    <EntitySetMapping Name="UserTypeMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.UserTypeMaster">
+        <MappingFragment StoreEntitySet="UserTypeMaster">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DisclaimerQuestionOptions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.DisclaimerQuestionOption">
+        <MappingFragment StoreEntitySet="DisclaimerQuestionOptions">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="questionId" ColumnName="questionId" />
+          <ScalarProperty Name="options" ColumnName="options" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DisclaimerQuestionsMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.DisclaimerQuestionsMaster">
+        <MappingFragment StoreEntitySet="DisclaimerQuestionsMaster">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="OptionId" ColumnName="OptionId" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="questionTypeId" ColumnName="questionTypeId" />
+          <ScalarProperty Name="questions" ColumnName="questions" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DisclaimerQuestionAnswers">
+      <EntityTypeMapping TypeName="FitnessCenterModel.DisclaimerQuestionAnswer">
+        <MappingFragment StoreEntitySet="DisclaimerQuestionAnswers">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="answerText" ColumnName="answerText" />
+          <ScalarProperty Name="optionId" ColumnName="optionId" />
+          <ScalarProperty Name="questionId" ColumnName="questionId" />
+          <ScalarProperty Name="disclaimerId" ColumnName="disclaimerId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Disclaimers">
+      <EntityTypeMapping TypeName="FitnessCenterModel.Disclaimer">
+        <MappingFragment StoreEntitySet="Disclaimer">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="emergencyRefRelationship3" ColumnName="emergencyRefRelationship3" />
+          <ScalarProperty Name="emergencyRefMobNo3" ColumnName="emergencyRefMobNo3" />
+          <ScalarProperty Name="emergencyRefLandLineNo3" ColumnName="emergencyRefLandLineNo3" />
+          <ScalarProperty Name="emeregencyArea3" ColumnName="emeregencyArea3" />
+          <ScalarProperty Name="emergencyRefName3" ColumnName="emergencyRefName3" />
+          <ScalarProperty Name="familyDoctorMobileNumber" ColumnName="familyDoctorMobileNumber" />
+          <ScalarProperty Name="familyDoctorName" ColumnName="familyDoctorName" />
+          <ScalarProperty Name="emergencyRefLandLineNo2" ColumnName="emergencyRefLandLineNo2" />
+          <ScalarProperty Name="emergencyRefRelationship2" ColumnName="emergencyRefRelationship2" />
+          <ScalarProperty Name="emergencyRefMobNo2" ColumnName="emergencyRefMobNo2" />
+          <ScalarProperty Name="emeregencyArea2" ColumnName="emeregencyArea2" />
+          <ScalarProperty Name="emergencyRefName2" ColumnName="emergencyRefName2" />
+          <ScalarProperty Name="emeregencyArea1" ColumnName="emeregencyArea1" />
+          <ScalarProperty Name="emergencyRefLandLineNo1" ColumnName="emergencyRefLandLineNo1" />
+          <ScalarProperty Name="emergencyRefMobNo1" ColumnName="emergencyRefMobNo1" />
+          <ScalarProperty Name="emergencyRefRelationship1" ColumnName="emergencyRefRelationship1" />
+          <ScalarProperty Name="emergencyRefName1" ColumnName="emergencyRefName1" />
+          <ScalarProperty Name="frameSize" ColumnName="frameSize" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="RFIDNo" ColumnName="RFIDNo" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetUserTargetByDateAndLeadType" FunctionName="FitnessCenterModel.Store.GetUserTargetByDateAndLeadType" />
+    <EntitySetMapping Name="Memberships">
+      <EntityTypeMapping TypeName="FitnessCenterModel.Membership">
+        <MappingFragment StoreEntitySet="Memberships">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="remainingAmount" ColumnName="remainingAmount" />
+          <ScalarProperty Name="amountPaid" ColumnName="amountPaid" />
+          <ScalarProperty Name="emergencyContactNumber" ColumnName="emergencyContactNumber" />
+          <ScalarProperty Name="emergencyContactName" ColumnName="emergencyContactName" />
+          <ScalarProperty Name="corporationSignature" ColumnName="corporationSignature" />
+          <ScalarProperty Name="corporateId" ColumnName="corporateId" />
+          <ScalarProperty Name="corporateName" ColumnName="corporateName" />
+          <ScalarProperty Name="memberSiganture" ColumnName="memberSiganture" />
+          <ScalarProperty Name="companySignature" ColumnName="companySignature" />
+          <ScalarProperty Name="guardianSignature" ColumnName="guardianSignature" />
+          <ScalarProperty Name="relationshipOfGuardian" ColumnName="relationshipOfGuardian" />
+          <ScalarProperty Name="guardianName" ColumnName="guardianName" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="sendMaterialsBy" ColumnName="sendMaterialsBy" />
+          <ScalarProperty Name="expiryDate" ColumnName="expiryDate" />
+          <ScalarProperty Name="profilePhoto" ColumnName="profilePhoto" />
+          <ScalarProperty Name="branchName" ColumnName="branchName" />
+          <ScalarProperty Name="consult" ColumnName="consult" />
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="membershipUniqueId" ColumnName="membershipUniqueId" />
+          <ScalarProperty Name="RFIDCardNumber" ColumnName="RFIDCardNumber" />
+          <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
+          <ScalarProperty Name="activationDate" ColumnName="activationDate" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="discountGivenBy" ColumnName="discountGivenBy" />
+          <ScalarProperty Name="serviceTaxInPercentage" ColumnName="serviceTaxInPercentage" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="schemeAmount" ColumnName="schemeAmount" />
+          <ScalarProperty Name="schemeID" ColumnName="schemeID" />
+          <ScalarProperty Name="packageAmount" ColumnName="packageAmount" />
+          <ScalarProperty Name="packageTypeId" ColumnName="packageTypeId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSchemeTransactions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.UserSchemeTransaction">
+        <MappingFragment StoreEntitySet="UserSchemeTransaction">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="userTypeId" ColumnName="userTypeId" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="serviceTaxInPercentage" ColumnName="serviceTaxInPercentage" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="userSchemeId" ColumnName="userSchemeId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExerciseCardMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.ExerciseCardMaster">
+        <MappingFragment StoreEntitySet="ExerciseCardMaster">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="Calories" ColumnName="Calories" />
+          <ScalarProperty Name="Resistence" ColumnName="Resistence" />
+          <ScalarProperty Name="RPM" ColumnName="RPM" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="exerciseTypeId" ColumnName="exerciseTypeId" />
+          <ScalarProperty Name="exerciseId" ColumnName="exerciseId" />
+          <ScalarProperty Name="bodyTypeId" ColumnName="bodyTypeId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExrciseCardLevelSets">
+      <EntityTypeMapping TypeName="FitnessCenterModel.ExrciseCardLevelSet">
+        <MappingFragment StoreEntitySet="ExrciseCardLevelSets">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="set4" ColumnName="set4" />
+          <ScalarProperty Name="set3" ColumnName="set3" />
+          <ScalarProperty Name="set2" ColumnName="set2" />
+          <ScalarProperty Name="set1" ColumnName="set1" />
+          <ScalarProperty Name="levelId" ColumnName="levelId" />
+          <ScalarProperty Name="exrciseCardId" ColumnName="exrciseCardId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAchievedTargetByUserAndLeadtype" FunctionName="FitnessCenterModel.Store.GetAchievedTargetByUserAndLeadtype">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetAchievedTargetByUserAndLeadtype_Result">
+          <ScalarProperty Name="ACHIVEDTARGET" ColumnName="ACHIVEDTARGET" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AssignExercises">
+      <EntityTypeMapping TypeName="FitnessCenterModel.AssignExercise">
+        <MappingFragment StoreEntitySet="AssignExercise">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="Calories" ColumnName="Calories" />
+          <ScalarProperty Name="Resistence" ColumnName="Resistence" />
+          <ScalarProperty Name="RPM" ColumnName="RPM" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="exerciseCardMasterId" ColumnName="exerciseCardMasterId" />
+          <ScalarProperty Name="set4" ColumnName="set4" />
+          <ScalarProperty Name="set3" ColumnName="set3" />
+          <ScalarProperty Name="set2" ColumnName="set2" />
+          <ScalarProperty Name="set1" ColumnName="set1" />
+          <ScalarProperty Name="levelId" ColumnName="levelId" />
+          <ScalarProperty Name="bodyTypeId" ColumnName="bodyTypeId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAssignExerciseByMemberId" FunctionName="FitnessCenterModel.Store.GetAssignExerciseByMemberId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetAssignExerciseByMemberId_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bodyTypeId" ColumnName="bodyTypeId" />
+          <ScalarProperty Name="levelId" ColumnName="levelId" />
+          <ScalarProperty Name="set1" ColumnName="set1" />
+          <ScalarProperty Name="set2" ColumnName="set2" />
+          <ScalarProperty Name="set3" ColumnName="set3" />
+          <ScalarProperty Name="set4" ColumnName="set4" />
+          <ScalarProperty Name="exerciseCardMasterId" ColumnName="exerciseCardMasterId" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="RPM" ColumnName="RPM" />
+          <ScalarProperty Name="Resistence" ColumnName="Resistence" />
+          <ScalarProperty Name="Calories" ColumnName="Calories" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="exerciseName" ColumnName="exerciseName" />
+          <ScalarProperty Name="exerciseTypeId" ColumnName="exerciseTypeId" />
+          <ScalarProperty Name="isPersonalTrainingPackAllow" ColumnName="isPersonalTrainingPackAllow" />
+          <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CancellationMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.CancellationMaster">
+        <MappingFragment StoreEntitySet="CancellationMaster">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="schemeId" ColumnName="schemeId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CancellationTransactions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.CancellationTransaction">
+        <MappingFragment StoreEntitySet="CancellationTransaction">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isReturn" ColumnName="isReturn" />
+          <ScalarProperty Name="branchDetails" ColumnName="branchDetails" />
+          <ScalarProperty Name="bankName" ColumnName="bankName" />
+          <ScalarProperty Name="chequeNo" ColumnName="chequeNo" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="membershipId" ColumnName="membershipId" />
+          <ScalarProperty Name="schemeId" ColumnName="schemeId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TimeTransactions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.TimeTransaction">
+        <MappingFragment StoreEntitySet="TimeTransaction">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="branchDetails" ColumnName="branchDetails" />
+          <ScalarProperty Name="bankName" ColumnName="bankName" />
+          <ScalarProperty Name="chequeNo" ColumnName="chequeNo" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="amtPaid" ColumnName="amtPaid" />
+          <ScalarProperty Name="days" ColumnName="days" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DowngradeTransactions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.DowngradeTransaction">
+        <MappingFragment StoreEntitySet="DowngradeTransaction">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isReturn" ColumnName="isReturn" />
+          <ScalarProperty Name="branchDetails" ColumnName="branchDetails" />
+          <ScalarProperty Name="bankName" ColumnName="bankName" />
+          <ScalarProperty Name="chequeNo" ColumnName="chequeNo" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="remAmt" ColumnName="remAmt" />
+          <ScalarProperty Name="paidAmt" ColumnName="paidAmt" />
+          <ScalarProperty Name="diffAmt" ColumnName="diffAmt" />
+          <ScalarProperty Name="schemeId" ColumnName="schemeId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UpgradeTransactions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.UpgradeTransaction">
+        <MappingFragment StoreEntitySet="UpgradeTransaction">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="branchDetails" ColumnName="branchDetails" />
+          <ScalarProperty Name="bankName" ColumnName="bankName" />
+          <ScalarProperty Name="chequeNo" ColumnName="chequeNo" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="remAmt" ColumnName="remAmt" />
+          <ScalarProperty Name="paidAmt" ColumnName="paidAmt" />
+          <ScalarProperty Name="diffAmt" ColumnName="diffAmt" />
+          <ScalarProperty Name="schemeId" ColumnName="schemeId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PTPMemberMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.PTPMemberMaster">
+        <MappingFragment StoreEntitySet="PTPMemberMaster">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="branchDetails" ColumnName="branchDetails" />
+          <ScalarProperty Name="bankName" ColumnName="bankName" />
+          <ScalarProperty Name="chequeNo" ColumnName="chequeNo" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="sessionCount" ColumnName="sessionCount" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="PTPPackageID" ColumnName="PTPPackageID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PTPMemberTransactions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.PTPMemberTransaction">
+        <MappingFragment StoreEntitySet="PTPMemberTransaction">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="PTPMemberMasterId" ColumnName="PTPMemberMasterId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAssignedTransaction" FunctionName="FitnessCenterModel.Store.GetAssignedTransaction">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetAssignedTransaction_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="PTPMemberMasterId" ColumnName="PTPMemberMasterId" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="FitnessCenterModel.Module">
+        <MappingFragment StoreEntitySet="Modules">
+          <ScalarProperty Name="moduleName" ColumnName="moduleName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberItemSales">
+      <EntityTypeMapping TypeName="FitnessCenterModel.MemberItemSale">
+        <MappingFragment StoreEntitySet="MemberItemSales">
+          <ScalarProperty Name="memberFinalSaleID" ColumnName="memberFinalSaleID" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TowelTransactions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.TowelTransaction">
+        <MappingFragment StoreEntitySet="TowelTransaction">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isTowelReturn" ColumnName="isTowelReturn" />
+          <ScalarProperty Name="isTowelGiven" ColumnName="isTowelGiven" />
+          <ScalarProperty Name="depositAmount" ColumnName="depositAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="towelHiriningId" ColumnName="towelHiriningId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetClubs" FunctionName="FitnessCenterModel.Store.GetClubs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetClubs_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="clubName" ColumnName="clubName" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobileNumber" ColumnName="mobileNumber" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetMembers" FunctionName="FitnessCenterModel.Store.GetMembers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetMembers_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="packageTypeId" ColumnName="packageTypeId" />
+          <ScalarProperty Name="packageAmount" ColumnName="packageAmount" />
+          <ScalarProperty Name="schemeID" ColumnName="schemeID" />
+          <ScalarProperty Name="schemeAmount" ColumnName="schemeAmount" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="serviceTaxInPercentage" ColumnName="serviceTaxInPercentage" />
+          <ScalarProperty Name="discountGivenBy" ColumnName="discountGivenBy" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="activationDate" ColumnName="activationDate" />
+          <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
+          <ScalarProperty Name="RFIDCardNumber" ColumnName="RFIDCardNumber" />
+          <ScalarProperty Name="membershipUniqueId" ColumnName="membershipUniqueId" />
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="consult" ColumnName="consult" />
+          <ScalarProperty Name="branchName" ColumnName="branchName" />
+          <ScalarProperty Name="profilePhoto" ColumnName="profilePhoto" />
+          <ScalarProperty Name="expiryDate" ColumnName="expiryDate" />
+          <ScalarProperty Name="sendMaterialsBy" ColumnName="sendMaterialsBy" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="guardianName" ColumnName="guardianName" />
+          <ScalarProperty Name="relationshipOfGuardian" ColumnName="relationshipOfGuardian" />
+          <ScalarProperty Name="guardianSignature" ColumnName="guardianSignature" />
+          <ScalarProperty Name="companySignature" ColumnName="companySignature" />
+          <ScalarProperty Name="memberSiganture" ColumnName="memberSiganture" />
+          <ScalarProperty Name="corporateName" ColumnName="corporateName" />
+          <ScalarProperty Name="corporateId" ColumnName="corporateId" />
+          <ScalarProperty Name="corporationSignature" ColumnName="corporationSignature" />
+          <ScalarProperty Name="emergencyContactName" ColumnName="emergencyContactName" />
+          <ScalarProperty Name="emergencyContactNumber" ColumnName="emergencyContactNumber" />
+          <ScalarProperty Name="amountPaid" ColumnName="amountPaid" />
+          <ScalarProperty Name="remainingAmount" ColumnName="remainingAmount" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCustomers" FunctionName="FitnessCenterModel.Store.GetCustomers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetCustomers_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="packageTypeId" ColumnName="packageTypeId" />
+          <ScalarProperty Name="packageAmount" ColumnName="packageAmount" />
+          <ScalarProperty Name="schemeID" ColumnName="schemeID" />
+          <ScalarProperty Name="schemeAmount" ColumnName="schemeAmount" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="serviceTaxInPercentage" ColumnName="serviceTaxInPercentage" />
+          <ScalarProperty Name="discountGivenBy" ColumnName="discountGivenBy" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="activationDate" ColumnName="activationDate" />
+          <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
+          <ScalarProperty Name="RFIDCardNumber" ColumnName="RFIDCardNumber" />
+          <ScalarProperty Name="membershipUniqueId" ColumnName="membershipUniqueId" />
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="consult" ColumnName="consult" />
+          <ScalarProperty Name="branchName" ColumnName="branchName" />
+          <ScalarProperty Name="profilePhoto" ColumnName="profilePhoto" />
+          <ScalarProperty Name="expiryDate" ColumnName="expiryDate" />
+          <ScalarProperty Name="sendMaterialsBy" ColumnName="sendMaterialsBy" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="guardianName" ColumnName="guardianName" />
+          <ScalarProperty Name="relationshipOfGuardian" ColumnName="relationshipOfGuardian" />
+          <ScalarProperty Name="guardianSignature" ColumnName="guardianSignature" />
+          <ScalarProperty Name="companySignature" ColumnName="companySignature" />
+          <ScalarProperty Name="memberSiganture" ColumnName="memberSiganture" />
+          <ScalarProperty Name="corporateName" ColumnName="corporateName" />
+          <ScalarProperty Name="corporateId" ColumnName="corporateId" />
+          <ScalarProperty Name="corporationSignature" ColumnName="corporationSignature" />
+          <ScalarProperty Name="emergencyContactName" ColumnName="emergencyContactName" />
+          <ScalarProperty Name="emergencyContactNumber" ColumnName="emergencyContactNumber" />
+          <ScalarProperty Name="amountPaid" ColumnName="amountPaid" />
+          <ScalarProperty Name="remainingAmount" ColumnName="remainingAmount" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="mobileNumber" ColumnName="mobileNumber" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="schemeName" ColumnName="schemeName" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPTPPackages" FunctionName="FitnessCenterModel.Store.GetPTPPackages" />
+    <FunctionImportMapping FunctionImportName="GetAssignedPTP" FunctionName="FitnessCenterModel.Store.GetAssignedPTP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetAssignedPTP_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PTPPackageID" ColumnName="PTPPackageID" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="sessionCount" ColumnName="sessionCount" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="chequeNo" ColumnName="chequeNo" />
+          <ScalarProperty Name="bankName" ColumnName="bankName" />
+          <ScalarProperty Name="branchDetails" ColumnName="branchDetails" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="MemID" ColumnName="MemID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="packageName" ColumnName="packageName" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetGroups" FunctionName="FitnessCenterModel.Store.GetGroups" />
+    <FunctionImportMapping FunctionImportName="GetItems" FunctionName="FitnessCenterModel.Store.GetItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetItems_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mrp" ColumnName="mrp" />
+          <ScalarProperty Name="groupId" ColumnName="groupId" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAssignedTowel" FunctionName="FitnessCenterModel.Store.GetAssignedTowel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetAssignedTowel_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="towelPackageId" ColumnName="towelPackageId" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="paymentMode" ColumnName="paymentMode" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="hiringTimeUpdate" ColumnName="hiringTimeUpdate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="packageName" ColumnName="packageName" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetTowelPackage" FunctionName="FitnessCenterModel.Store.GetTowelPackage" />
+    <EntitySetMapping Name="MeasurementMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.MeasurementMaster">
+        <MappingFragment StoreEntitySet="MeasurementMaster">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="CALF" ColumnName="CALF" />
+          <ScalarProperty Name="THIGH" ColumnName="THIGH" />
+          <ScalarProperty Name="HIPS" ColumnName="HIPS" />
+          <ScalarProperty Name="WAIST" ColumnName="WAIST" />
+          <ScalarProperty Name="ARMS" ColumnName="ARMS" />
+          <ScalarProperty Name="CHEST" ColumnName="CHEST" />
+          <ScalarProperty Name="SHOULDER" ColumnName="SHOULDER" />
+          <ScalarProperty Name="NECK" ColumnName="NECK" />
+          <ScalarProperty Name="BMR" ColumnName="BMR" />
+          <ScalarProperty Name="BMI" ColumnName="BMI" />
+          <ScalarProperty Name="FAT" ColumnName="FAT" />
+          <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.ItemMaster">
+        <MappingFragment StoreEntitySet="ItemMaster">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="groupId" ColumnName="groupId" />
+          <ScalarProperty Name="mrp" ColumnName="mrp" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberItemTotalSales">
+      <EntityTypeMapping TypeName="FitnessCenterModel.MemberItemTotalSale">
+        <MappingFragment StoreEntitySet="MemberItemTotalSales">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="remAmount" ColumnName="remAmount" />
+          <ScalarProperty Name="amountPaid" ColumnName="amountPaid" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetProductSales" FunctionName="FitnessCenterModel.Store.GetProductSales">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetProductSales_Result">
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="MemberJuiceMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.MemberJuiceMaster">
+        <MappingFragment StoreEntitySet="MemberJuiceMaster">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="remAmount" ColumnName="remAmount" />
+          <ScalarProperty Name="amountPaid" ColumnName="amountPaid" />
+          <ScalarProperty Name="availableAmount" ColumnName="availableAmount" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="validDays" ColumnName="validDays" />
+          <ScalarProperty Name="rechargeAmount" ColumnName="rechargeAmount" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberJuiceTransactions">
+      <EntityTypeMapping TypeName="FitnessCenterModel.MemberJuiceTransaction">
+        <MappingFragment StoreEntitySet="MemberJuiceTransaction">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetJuiceTrans" FunctionName="FitnessCenterModel.Store.GetJuiceTrans">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetJuiceTrans_Result">
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="TowelHiringMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.TowelHiringMaster">
+        <MappingFragment StoreEntitySet="TowelHiringMaster">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="hiringTimeUpdate" ColumnName="hiringTimeUpdate" />
+          <ScalarProperty Name="branchDetails" ColumnName="branchDetails" />
+          <ScalarProperty Name="bankName" ColumnName="bankName" />
+          <ScalarProperty Name="chequeNo" ColumnName="chequeNo" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="paymentMode" ColumnName="paymentMode" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="towelPackageId" ColumnName="towelPackageId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.GroupMaster">
+        <MappingFragment StoreEntitySet="GroupMaster">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PackageMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.PackageMaster">
+        <MappingFragment StoreEntitySet="PackageMaster">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="serviceTaxInPercentage" ColumnName="serviceTaxInPercentage" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="durationInMonths" ColumnName="durationInMonths" />
+          <ScalarProperty Name="packageName" ColumnName="packageName" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PTPPackageMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.PTPPackageMaster">
+        <MappingFragment StoreEntitySet="PTPPackageMaster">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="noOfSessions" ColumnName="noOfSessions" />
+          <ScalarProperty Name="validDays" ColumnName="validDays" />
+          <ScalarProperty Name="fees" ColumnName="fees" />
+          <ScalarProperty Name="packageName" ColumnName="packageName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TowelHiringPackages">
+      <EntityTypeMapping TypeName="FitnessCenterModel.TowelHiringPackage">
+        <MappingFragment StoreEntitySet="TowelHiringPackage">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="depositAmount" ColumnName="depositAmount" />
+          <ScalarProperty Name="hiringTime" ColumnName="hiringTime" />
+          <ScalarProperty Name="numberOfDays" ColumnName="numberOfDays" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="packageName" ColumnName="packageName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetExerciseMaster" FunctionName="FitnessCenterModel.Store.GetExerciseMaster">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetExerciseMaster_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="bodyTypeId" ColumnName="bodyTypeId" />
+          <ScalarProperty Name="exerciseId" ColumnName="exerciseId" />
+          <ScalarProperty Name="exerciseTypeId" ColumnName="exerciseTypeId" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="RPM" ColumnName="RPM" />
+          <ScalarProperty Name="Resistence" ColumnName="Resistence" />
+          <ScalarProperty Name="Calories" ColumnName="Calories" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="exerciseName" ColumnName="exerciseName" />
+          <ScalarProperty Name="isPersonalTrainingPackAllow" ColumnName="isPersonalTrainingPackAllow" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAssignExercise" FunctionName="FitnessCenterModel.Store.GetAssignExercise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetAssignExercise_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="bodyTypeId" ColumnName="bodyTypeId" />
+          <ScalarProperty Name="levelId" ColumnName="levelId" />
+          <ScalarProperty Name="set1" ColumnName="set1" />
+          <ScalarProperty Name="set2" ColumnName="set2" />
+          <ScalarProperty Name="set3" ColumnName="set3" />
+          <ScalarProperty Name="set4" ColumnName="set4" />
+          <ScalarProperty Name="exerciseCardMasterId" ColumnName="exerciseCardMasterId" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="RPM" ColumnName="RPM" />
+          <ScalarProperty Name="Resistence" ColumnName="Resistence" />
+          <ScalarProperty Name="Calories" ColumnName="Calories" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="exerciseTypeId" ColumnName="exerciseTypeId" />
+          <ScalarProperty Name="exerciseName" ColumnName="exerciseName" />
+          <ScalarProperty Name="isPersonalTrainingPackAllow" ColumnName="isPersonalTrainingPackAllow" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetMembersFromAssignExercise" FunctionName="FitnessCenterModel.Store.GetMembersFromAssignExercise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetMembersFromAssignExercise_Result">
+          <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+          <ScalarProperty Name="MEMBERID" ColumnName="MEMBERID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetArobicExercise" FunctionName="FitnessCenterModel.Store.GetArobicExercise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetArobicExercise_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="exerciseName" ColumnName="exerciseName" />
+          <ScalarProperty Name="exerciseTypeId" ColumnName="exerciseTypeId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="isPersonalTrainingPackAllow" ColumnName="isPersonalTrainingPackAllow" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="CardID" ColumnName="CardID" />
+          <ScalarProperty Name="Calories" ColumnName="Calories" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="Resistence" ColumnName="Resistence" />
+          <ScalarProperty Name="RPM" ColumnName="RPM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetNonArobicExercise" FunctionName="FitnessCenterModel.Store.GetNonArobicExercise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetNonArobicExercise_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="exerciseName" ColumnName="exerciseName" />
+          <ScalarProperty Name="exerciseTypeId" ColumnName="exerciseTypeId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="isPersonalTrainingPackAllow" ColumnName="isPersonalTrainingPackAllow" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="CardID" ColumnName="CardID" />
+          <ScalarProperty Name="set1" ColumnName="set1" />
+          <ScalarProperty Name="set2" ColumnName="set2" />
+          <ScalarProperty Name="set3" ColumnName="set3" />
+          <ScalarProperty Name="set4" ColumnName="set4" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPackageMaster" FunctionName="FitnessCenterModel.Store.GetPackageMaster" />
+    <EntitySetMapping Name="ExerciseMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.ExerciseMaster">
+        <MappingFragment StoreEntitySet="ExerciseMaster">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isPersonalTrainingPackAllow" ColumnName="isPersonalTrainingPackAllow" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="exerciseTypeId" ColumnName="exerciseTypeId" />
+          <ScalarProperty Name="exerciseName" ColumnName="exerciseName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetLeadTargetHeaders" FunctionName="FitnessCenterModel.Store.GetLeadTargetHeaders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetLeadTargetHeaders_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
+          <ScalarProperty Name="TARGETACHIEVED" ColumnName="TARGETACHIEVED" />
+          <ScalarProperty Name="TARGETCNT" ColumnName="TARGETCNT" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="CNT" ColumnName="CNT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetUserTypes" FunctionName="FitnessCenterModel.Store.GetUserTypes" />
+    <EntitySetMapping Name="AboutUs">
+      <EntityTypeMapping TypeName="FitnessCenterModel.AboutU">
+        <MappingFragment StoreEntitySet="AboutUs">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="heading" ColumnName="heading" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VirtualVideos">
+      <EntityTypeMapping TypeName="FitnessCenterModel.VirtualVideo">
+        <MappingFragment StoreEntitySet="VirtualVideos">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Careers">
+      <EntityTypeMapping TypeName="FitnessCenterModel.Career">
+        <MappingFragment StoreEntitySet="Career">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="positionName" ColumnName="positionName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facilities">
+      <EntityTypeMapping TypeName="FitnessCenterModel.Facility">
+        <MappingFragment StoreEntitySet="Facility">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="facilityName" ColumnName="facilityName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Leads">
+      <EntityTypeMapping TypeName="FitnessCenterModel.Lead">
+        <MappingFragment StoreEntitySet="Leads">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="transferBy" ColumnName="transferBy" />
+          <ScalarProperty Name="transferTo" ColumnName="transferTo" />
+          <ScalarProperty Name="isTransfer" ColumnName="isTransfer" />
+          <ScalarProperty Name="leadStatusId" ColumnName="leadStatusId" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="corporateId" ColumnName="corporateId" />
+          <ScalarProperty Name="relationWtihMember" ColumnName="relationWtihMember" />
+          <ScalarProperty Name="memberShipId" ColumnName="memberShipId" />
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="employee" ColumnName="employee" />
+          <ScalarProperty Name="occupation" ColumnName="occupation" />
+          <ScalarProperty Name="anniversaryDate" ColumnName="anniversaryDate" />
+          <ScalarProperty Name="maritalStatus" ColumnName="maritalStatus" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="leadTypeId" ColumnName="leadTypeId" />
+          <ScalarProperty Name="responseTypeId" ColumnName="responseTypeId" />
+          <ScalarProperty Name="bestTimeToCall" ColumnName="bestTimeToCall" />
+          <ScalarProperty Name="otherContactNumber" ColumnName="otherContactNumber" />
+          <ScalarProperty Name="mobileNumber" ColumnName="mobileNumber" />
+          <ScalarProperty Name="pincode" ColumnName="pincode" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HomepageSliders">
+      <EntityTypeMapping TypeName="FitnessCenterModel.HomepageSlider">
+        <MappingFragment StoreEntitySet="HomepageSlider">
+          <ScalarProperty Name="insertedDate" ColumnName="insertedDate" />
+          <ScalarProperty Name="updatedDate" ColumnName="updatedDate" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isDisplayed" ColumnName="isDisplayed" />
+          <ScalarProperty Name="imageName" ColumnName="imageName" />
+          <ScalarProperty Name="imagePath" ColumnName="imagePath" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetMembersByLeadID" FunctionName="FitnessCenterModel.Store.GetMembersByLeadID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetMembersByLeadID_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="packageTypeId" ColumnName="packageTypeId" />
+          <ScalarProperty Name="packageAmount" ColumnName="packageAmount" />
+          <ScalarProperty Name="schemeID" ColumnName="schemeID" />
+          <ScalarProperty Name="schemeAmount" ColumnName="schemeAmount" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="serviceTaxInPercentage" ColumnName="serviceTaxInPercentage" />
+          <ScalarProperty Name="discountGivenBy" ColumnName="discountGivenBy" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="activationDate" ColumnName="activationDate" />
+          <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
+          <ScalarProperty Name="RFIDCardNumber" ColumnName="RFIDCardNumber" />
+          <ScalarProperty Name="membershipUniqueId" ColumnName="membershipUniqueId" />
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="consult" ColumnName="consult" />
+          <ScalarProperty Name="branchName" ColumnName="branchName" />
+          <ScalarProperty Name="profilePhoto" ColumnName="profilePhoto" />
+          <ScalarProperty Name="expiryDate" ColumnName="expiryDate" />
+          <ScalarProperty Name="sendMaterialsBy" ColumnName="sendMaterialsBy" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="guardianName" ColumnName="guardianName" />
+          <ScalarProperty Name="relationshipOfGuardian" ColumnName="relationshipOfGuardian" />
+          <ScalarProperty Name="guardianSignature" ColumnName="guardianSignature" />
+          <ScalarProperty Name="companySignature" ColumnName="companySignature" />
+          <ScalarProperty Name="memberSiganture" ColumnName="memberSiganture" />
+          <ScalarProperty Name="corporateName" ColumnName="corporateName" />
+          <ScalarProperty Name="corporateId" ColumnName="corporateId" />
+          <ScalarProperty Name="corporationSignature" ColumnName="corporationSignature" />
+          <ScalarProperty Name="emergencyContactName" ColumnName="emergencyContactName" />
+          <ScalarProperty Name="emergencyContactNumber" ColumnName="emergencyContactNumber" />
+          <ScalarProperty Name="amountPaid" ColumnName="amountPaid" />
+          <ScalarProperty Name="remainingAmount" ColumnName="remainingAmount" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="MembersName" ColumnName="MembersName" />
+          <ScalarProperty Name="SortData" ColumnName="SortData" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetDiscalimersEntry" FunctionName="FitnessCenterModel.Store.GetDiscalimersEntry">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetDiscalimersEntry_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="RFIDNo" ColumnName="RFIDNo" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="frameSize" ColumnName="frameSize" />
+          <ScalarProperty Name="emergencyRefName1" ColumnName="emergencyRefName1" />
+          <ScalarProperty Name="emergencyRefRelationship1" ColumnName="emergencyRefRelationship1" />
+          <ScalarProperty Name="emergencyRefMobNo1" ColumnName="emergencyRefMobNo1" />
+          <ScalarProperty Name="emergencyRefLandLineNo1" ColumnName="emergencyRefLandLineNo1" />
+          <ScalarProperty Name="emeregencyArea1" ColumnName="emeregencyArea1" />
+          <ScalarProperty Name="emergencyRefName2" ColumnName="emergencyRefName2" />
+          <ScalarProperty Name="emeregencyArea2" ColumnName="emeregencyArea2" />
+          <ScalarProperty Name="emergencyRefMobNo2" ColumnName="emergencyRefMobNo2" />
+          <ScalarProperty Name="emergencyRefRelationship2" ColumnName="emergencyRefRelationship2" />
+          <ScalarProperty Name="emergencyRefLandLineNo2" ColumnName="emergencyRefLandLineNo2" />
+          <ScalarProperty Name="familyDoctorName" ColumnName="familyDoctorName" />
+          <ScalarProperty Name="familyDoctorMobileNumber" ColumnName="familyDoctorMobileNumber" />
+          <ScalarProperty Name="emergencyRefName3" ColumnName="emergencyRefName3" />
+          <ScalarProperty Name="emeregencyArea3" ColumnName="emeregencyArea3" />
+          <ScalarProperty Name="emergencyRefLandLineNo3" ColumnName="emergencyRefLandLineNo3" />
+          <ScalarProperty Name="emergencyRefMobNo3" ColumnName="emergencyRefMobNo3" />
+          <ScalarProperty Name="emergencyRefRelationship3" ColumnName="emergencyRefRelationship3" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="UserSchemeMasters">
+      <EntityTypeMapping TypeName="FitnessCenterModel.UserSchemeMaster">
+        <MappingFragment StoreEntitySet="UserSchemeMaster">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="DowngradeDays" ColumnName="DowngradeDays" />
+          <ScalarProperty Name="UpgradeDays" ColumnName="UpgradeDays" />
+          <ScalarProperty Name="CancelDays" ColumnName="CancelDays" />
+          <ScalarProperty Name="isAllowCancelation" ColumnName="isAllowCancelation" />
+          <ScalarProperty Name="endTime" ColumnName="endTime" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="serviceTaxInPercentage" ColumnName="serviceTaxInPercentage" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="additionalExpense" ColumnName="additionalExpense" />
+          <ScalarProperty Name="schemeName" ColumnName="schemeName" />
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttendenceManagements">
+      <EntityTypeMapping TypeName="FitnessCenterModel.AttendenceManagement">
+        <MappingFragment StoreEntitySet="AttendenceManagement">
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="AgreementNumber" ColumnName="AgreementNumber" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="lastCheckInDays" ColumnName="lastCheckInDays" />
+          <ScalarProperty Name="lastCheckInDate" ColumnName="lastCheckInDate" />
+          <ScalarProperty Name="lastCheckInTime" ColumnName="lastCheckInTime" />
+          <ScalarProperty Name="profilePicture" ColumnName="profilePicture" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="accessType" ColumnName="accessType" />
+          <ScalarProperty Name="branchName" ColumnName="branchName" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="packageName" ColumnName="packageName" />
+          <ScalarProperty Name="RFIDNumber" ColumnName="RFIDNumber" />
+          <ScalarProperty Name="membershipNumber" ColumnName="membershipNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DuePaymentHistories">
+      <EntityTypeMapping TypeName="FitnessCenterModel.DuePaymentHistory">
+        <MappingFragment StoreEntitySet="DuePaymentHistory">
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="remainingAmount" ColumnName="remainingAmount" />
+          <ScalarProperty Name="MembershipAmount" ColumnName="MembershipAmount" />
+          <ScalarProperty Name="activationDate" ColumnName="activationDate" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FreeTrials">
+      <EntityTypeMapping TypeName="FitnessCenterModel.FreeTrial">
+        <MappingFragment StoreEntitySet="FreeTrial">
+          <ScalarProperty Name="TrialDate" ColumnName="TrialDate" />
+          <ScalarProperty Name="insertedDate" ColumnName="insertedDate" />
+          <ScalarProperty Name="FitnessGoal" ColumnName="FitnessGoal" />
+          <ScalarProperty Name="TrialMessage" ColumnName="TrialMessage" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAgreementReceipt" FunctionName="FitnessCenterModel.Store.GetAgreementReceipt">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetAgreementReceipt_Result">
+          <ScalarProperty Name="consult" ColumnName="consult" />
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="branchName" ColumnName="branchName" />
+          <ScalarProperty Name="membershipUniqueId" ColumnName="membershipUniqueId" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="emergencyContactName" ColumnName="emergencyContactName" />
+          <ScalarProperty Name="emergencyContactNumber" ColumnName="emergencyContactNumber" />
+          <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
+          <ScalarProperty Name="activationDate" ColumnName="activationDate" />
+          <ScalarProperty Name="expiryDate" ColumnName="expiryDate" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="corporateName" ColumnName="corporateName" />
+          <ScalarProperty Name="corporateId" ColumnName="corporateId" />
+          <ScalarProperty Name="sendMaterialsBy" ColumnName="sendMaterialsBy" />
+          <ScalarProperty Name="guardianName" ColumnName="guardianName" />
+          <ScalarProperty Name="relationshipOfGuardian" ColumnName="relationshipOfGuardian" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="OtherContact" ColumnName="OtherContact" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PackageTitle" ColumnName="PackageTitle" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="JoiningFees" ColumnName="JoiningFees" />
+          <ScalarProperty Name="AdminFees" ColumnName="AdminFees" />
+          <ScalarProperty Name="AdminFeesANDJoiningFees" ColumnName="AdminFeesANDJoiningFees" />
+          <ScalarProperty Name="PackageFees" ColumnName="PackageFees" />
+          <ScalarProperty Name="ServiceTax" ColumnName="ServiceTax" />
+          <ScalarProperty Name="NetPaybleAmount" ColumnName="NetPaybleAmount" />
+          <ScalarProperty Name="SchemeTitle" ColumnName="SchemeTitle" />
+          <ScalarProperty Name="SchemePackageAmount" ColumnName="SchemePackageAmount" />
+          <ScalarProperty Name="SchemeTotalAmount" ColumnName="SchemeTotalAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetFreeTrial" FunctionName="FitnessCenterModel.Store.GetFreeTrial">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetFreeTrial_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="TrialMessage" ColumnName="TrialMessage" />
+          <ScalarProperty Name="FitnessGoal" ColumnName="FitnessGoal" />
+          <ScalarProperty Name="insertedDate" ColumnName="insertedDate" />
+          <ScalarProperty Name="TrialDate" ColumnName="TrialDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPaymentReciept" FunctionName="FitnessCenterModel.Store.GetPaymentReciept">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetPaymentReciept_Result">
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DueAmountDate" ColumnName="DueAmountDate" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="activationDate" ColumnName="activationDate" />
+          <ScalarProperty Name="remainingAmount" ColumnName="remainingAmount" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="RecieptNumber" ColumnName="RecieptNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetLeads" FunctionName="FitnessCenterModel.Store.GetLeads" />
+    <FunctionImportMapping FunctionImportName="GetSalesLeads" FunctionName="FitnessCenterModel.Store.GetSalesLeads" />
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="FitnessCenterModel.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="isFullPaid" ColumnName="isFullPaid" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="isPaid" ColumnName="isPaid" />
+          <ScalarProperty Name="DueAmountDate" ColumnName="DueAmountDate" />
+          <ScalarProperty Name="ReceiptNumber" ColumnName="ReceiptNumber" />
+          <ScalarProperty Name="ReceiptDate" ColumnName="ReceiptDate" />
+          <ScalarProperty Name="remainingAmount" ColumnName="remainingAmount" />
+          <ScalarProperty Name="amountPaid" ColumnName="amountPaid" />
+          <ScalarProperty Name="payMode" ColumnName="payMode" />
+          <ScalarProperty Name="expiryDate" ColumnName="expiryDate" />
+          <ScalarProperty Name="branchName" ColumnName="branchName" />
+          <ScalarProperty Name="consult" ColumnName="consult" />
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="membershipUniqueId" ColumnName="membershipUniqueId" />
+          <ScalarProperty Name="RFIDCardNumber" ColumnName="RFIDCardNumber" />
+          <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
+          <ScalarProperty Name="activationDate" ColumnName="activationDate" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="discountGivenBy" ColumnName="discountGivenBy" />
+          <ScalarProperty Name="serviceTaxInPercentage" ColumnName="serviceTaxInPercentage" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="schemeAmount" ColumnName="schemeAmount" />
+          <ScalarProperty Name="schemeID" ColumnName="schemeID" />
+          <ScalarProperty Name="packageAmount" ColumnName="packageAmount" />
+          <ScalarProperty Name="packageTypeId" ColumnName="packageTypeId" />
+          <ScalarProperty Name="clubId" ColumnName="clubId" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetUserSchemeMaster" FunctionName="FitnessCenterModel.Store.GetUserSchemeMaster">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetUserSchemeMaster_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PackageId" ColumnName="PackageId" />
+          <ScalarProperty Name="schemeName" ColumnName="schemeName" />
+          <ScalarProperty Name="additionalExpense" ColumnName="additionalExpense" />
+          <ScalarProperty Name="joiningFee" ColumnName="joiningFee" />
+          <ScalarProperty Name="adminFee" ColumnName="adminFee" />
+          <ScalarProperty Name="membershipFee" ColumnName="membershipFee" />
+          <ScalarProperty Name="personalTrainingPack" ColumnName="personalTrainingPack" />
+          <ScalarProperty Name="serviceTaxInPercentage" ColumnName="serviceTaxInPercentage" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="endTime" ColumnName="endTime" />
+          <ScalarProperty Name="isAllowCancelation" ColumnName="isAllowCancelation" />
+          <ScalarProperty Name="CancelDays" ColumnName="CancelDays" />
+          <ScalarProperty Name="UpgradeDays" ColumnName="UpgradeDays" />
+          <ScalarProperty Name="DowngradeDays" ColumnName="DowngradeDays" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="packageName" ColumnName="packageName" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetFullPayment" FunctionName="FitnessCenterModel.Store.GetFullPayment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetFullPayment_Result">
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="RFIDCardNumber" ColumnName="RFIDCardNumber" />
+          <ScalarProperty Name="DueAmountDate" ColumnName="DueAmountDate" />
+          <ScalarProperty Name="FinalAmount" ColumnName="FinalAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="RemainingAmount" ColumnName="RemainingAmount" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPaymentHistory" FunctionName="FitnessCenterModel.Store.GetPaymentHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetPaymentHistory_Result">
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="RFIDCardNumber" ColumnName="RFIDCardNumber" />
+          <ScalarProperty Name="finalAmount" ColumnName="finalAmount" />
+          <ScalarProperty Name="amountPaid" ColumnName="amountPaid" />
+          <ScalarProperty Name="remainingAmount" ColumnName="remainingAmount" />
+          <ScalarProperty Name="DueAmountDate" ColumnName="DueAmountDate" />
+          <ScalarProperty Name="PaidAmountDate" ColumnName="PaidAmountDate" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPartPayment" FunctionName="FitnessCenterModel.Store.GetPartPayment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetPartPayment_Result">
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="RFIDCardNumber" ColumnName="RFIDCardNumber" />
+          <ScalarProperty Name="DueAmountDate" ColumnName="DueAmountDate" />
+          <ScalarProperty Name="FinalAmount" ColumnName="FinalAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="RemainingAmount" ColumnName="RemainingAmount" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAbsentMembers" FunctionName="FitnessCenterModel.Store.GetAbsentMembers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetAbsentMembers_Result">
+          <ScalarProperty Name="RFIDNumber" ColumnName="RFIDNumber" />
+          <ScalarProperty Name="AgreementNumber" ColumnName="AgreementNumber" />
+          <ScalarProperty Name="lastCheckInDate" ColumnName="lastCheckInDate" />
+          <ScalarProperty Name="membershipNumber" ColumnName="membershipNumber" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPresentMembers" FunctionName="FitnessCenterModel.Store.GetPresentMembers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetPresentMembers_Result">
+          <ScalarProperty Name="RFIDNumber" ColumnName="RFIDNumber" />
+          <ScalarProperty Name="AgreementNumber" ColumnName="AgreementNumber" />
+          <ScalarProperty Name="lastCheckInDate" ColumnName="lastCheckInDate" />
+          <ScalarProperty Name="membershipNumber" ColumnName="membershipNumber" />
+          <ScalarProperty Name="memberName" ColumnName="memberName" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="LeadFollowups">
+      <EntityTypeMapping TypeName="FitnessCenterModel.LeadFollowup">
+        <MappingFragment StoreEntitySet="LeadFollowups">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="insertDate" ColumnName="insertDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="presentationId" ColumnName="presentationId" />
+          <ScalarProperty Name="appoinmentId" ColumnName="appoinmentId" />
+          <ScalarProperty Name="leadId" ColumnName="leadId" />
+          <ScalarProperty Name="followupDateTime" ColumnName="followupDateTime" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetExpiredMembers" FunctionName="FitnessCenterModel.Store.GetExpiredMembers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FitnessCenterModel.GetExpiredMembers_Result">
+          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+          <ScalarProperty Name="expiryDate" ColumnName="expiryDate" />
+          <ScalarProperty Name="agreementNumber" ColumnName="agreementNumber" />
+          <ScalarProperty Name="membershipUniqueId" ColumnName="membershipUniqueId" />
+          <ScalarProperty Name="RFIDCardNumber" ColumnName="RFIDCardNumber" />
+          <ScalarProperty Name="activationDate" ColumnName="activationDate" />
+          <ScalarProperty Name="packageName" ColumnName="packageName" />
+          <ScalarProperty Name="schemeName" ColumnName="schemeName" />
+          <ScalarProperty Name="SORTDATA" ColumnName="SORTDATA" />
+          <ScalarProperty Name="SORTDATABYORDER" ColumnName="SORTDATABYORDER" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

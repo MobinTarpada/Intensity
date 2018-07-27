@@ -1,0 +1,96 @@
+﻿.web_dialog_overlay {
+    background: none repeat scroll 0 0 rgb(0, 0, 0);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0.64;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.wdoMain {
+    margin: 0 !important;
+    top: 30% !important;
+    width: 308px !important;
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    left: 40%;
+    margin: -250px 0 0 -280px;
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    width: 900px;
+    z-index: 10500;
+}
+
+.wdoHeader {
+    background-color: #428bca;
+    padding: 9px 15px;
+}
+
+    .wdoHeader span {
+        color: white;
+    }
+
+.wdoFooter {
+    background-color: rgb(245, 245, 245);
+    border-radius: 0 0 6px 6px;
+    border-top: 1px solid rgb(221, 221, 221);
+    box-shadow: 0 1px 0 rgb(255, 255, 255) inset;
+    margin-bottom: 0;
+    padding: 8px;
+    text-align: right;
+}
+
+    .wdoFooter:after, .wdoFooter:before {
+        content: "";
+        display: table;
+    }
+
+    .wdoFooter:after {
+        clear: both;
+    }
+
+.modalbtn {
+    width: 90px !important;
+    height: 35px !important;
+}
+
+/* 
+    For Calender PopUp
+*/
+.wdoMainCal {
+    background-clip: padding-box;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    left: 40%;
+    margin: 0 !important;
+    overflow: auto;
+    position: fixed;
+    top: 30% !important;
+    z-index: 10500;
+}
+
+.TimeReportModelPopup {
+    background-clip: padding-box;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    left: 20%;
+    margin: 0 !important;
+    overflow: auto;
+    position: fixed;
+    top: 13% !important;
+    z-index: 10500;
+}

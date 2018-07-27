@@ -1,0 +1,91 @@
+﻿.section {
+    width: 100%;
+    text-align: center;
+}
+
+    .section .section-inner:last-child {
+        margin-bottom: 0;
+    }
+
+    .section .section-inner {
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+@media screen and (min-width:640px) {
+    .section .section-inner {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.section .section-inner h2 {
+    color: #343538;
+}
+
+
+@media screen and (min-width:820px) {
+    .section-inner {
+        max-width: 1200px;
+    }
+
+    .section h1 {
+        font-size: 50px;
+        font-size: 5rem;
+    }
+
+    .section h2 {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.accordion {
+    margin: 50px 5% 0 5%;
+    text-align: left;
+}
+
+    .accordion h3 {
+        color: #343538;
+        background: url("../images/fitness/ff-sprite.png") no-repeat 9px -1518px #ededed;
+        font-size: 16px;
+        font-size: 1.6rem;
+        padding: 10px 10px 10px 40px;
+        border-bottom: 2px solid #fff;
+        text-transform: none;
+        cursor: pointer;
+    }
+
+        .accordion h3.active {
+            background: url("../images/fitness/ff-sprite.png") no-repeat 9px -1633px #ededed;
+        }
+
+        .accordion h3 span {
+            display: inline-block;
+            width: 80%;
+        }
+
+@media screen and (min-width:820px) {
+    .accordion h3 {
+        font-size: 18px;
+        font-size: 1.8rem;
+    }
+}
+
+.accordion .accordion-content {
+    background: #ccc;
+    padding: 20px 20% 20px 27px;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+}
+
+    .accordion .accordion-content:last-child {
+        border-bottom: 2px solid red;
+    }
+
+.accordion .accordion-content {
+    padding-right: 20px;
+}

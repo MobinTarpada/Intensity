@@ -1,0 +1,4 @@
+F:\Bony\Projects\Websites\08-03-2016\VideoControl\bin\Debug\VideoControl.dll
+F:\Bony\Projects\Websites\08-03-2016\VideoControl\bin\Debug\VideoControl.pdb
+F:\Bony\Projects\Websites\08-03-2016\VideoControl\obj\Debug\VideoControl.dll
+F:\Bony\Projects\Websites\08-03-2016\VideoControl\obj\Debug\VideoControl.pdb

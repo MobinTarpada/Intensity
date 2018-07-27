@@ -1,0 +1,2122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FitnessCenterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AboutUs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="heading" Type="varchar(max)" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="image" Type="varchar(max)" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccessMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="userId" Type="bigint" Nullable="false" />
+    <Property Name="pageId" Type="bigint" Nullable="false" />
+    <Property Name="updateBy" Type="bigint" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AssignExercise">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="bodyTypeId" Type="int" />
+    <Property Name="levelId" Type="int" />
+    <Property Name="set1" Type="varchar" MaxLength="70" />
+    <Property Name="set2" Type="varchar" MaxLength="70" />
+    <Property Name="set3" Type="varchar" MaxLength="70" />
+    <Property Name="set4" Type="varchar" MaxLength="70" />
+    <Property Name="exerciseCardMasterId" Type="bigint" />
+    <Property Name="duration" Type="varchar" MaxLength="50" />
+    <Property Name="RPM" Type="varchar" MaxLength="50" />
+    <Property Name="Resistence" Type="varchar" MaxLength="50" />
+    <Property Name="Calories" Type="varchar" MaxLength="50" />
+    <Property Name="Distance" Type="varchar" MaxLength="50" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AttendenceManagement">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="membershipNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RFIDNumber" Type="varchar" MaxLength="50" />
+    <Property Name="AgreementNumber" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="50" />
+    <Property Name="packageName" Type="varchar" MaxLength="50" />
+    <Property Name="memberName" Type="varchar" MaxLength="150" />
+    <Property Name="branchName" Type="varchar" MaxLength="150" />
+    <Property Name="accessType" Type="varchar" MaxLength="150" />
+    <Property Name="Message" Type="varchar(max)" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="profilePicture" Type="varchar(max)" />
+    <Property Name="lastCheckInTime" Type="varchar" MaxLength="50" />
+    <Property Name="lastCheckInDate" Type="datetime" />
+    <Property Name="lastCheckInDays" Type="varchar" MaxLength="50" />
+    <Property Name="insertDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CancellationMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="schemeId" Type="bigint" Nullable="false" />
+    <Property Name="joiningFee" Type="bit" Nullable="false" />
+    <Property Name="adminFee" Type="bit" Nullable="false" />
+    <Property Name="membershipFee" Type="bit" Nullable="false" />
+    <Property Name="personalTrainingPack" Type="bit" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CancellationTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="schemeId" Type="bigint" Nullable="false" />
+    <Property Name="membershipId" Type="bigint" Nullable="false" />
+    <Property Name="joiningFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="adminFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="membershipFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="personalTrainingPack" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="payMode" Type="bigint" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="chequeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="bankName" Type="varchar" MaxLength="50" />
+    <Property Name="branchDetails" Type="varchar(max)" />
+    <Property Name="isReturn" Type="bit" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Career">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="positionName" Type="varchar(max)" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clubs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clubName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="endDate" Type="datetime" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Disclaimer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="RFIDNo" Type="varchar(max)" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="height" Type="varchar" MaxLength="10" />
+    <Property Name="weight" Type="varchar" MaxLength="10" />
+    <Property Name="frameSize" Type="varchar" MaxLength="50" />
+    <Property Name="emergencyRefName1" Type="varchar" MaxLength="80" />
+    <Property Name="emergencyRefRelationship1" Type="varchar" MaxLength="30" />
+    <Property Name="emergencyRefMobNo1" Type="varchar" MaxLength="20" />
+    <Property Name="emergencyRefLandLineNo1" Type="varchar" MaxLength="20" />
+    <Property Name="emeregencyArea1" Type="varchar" MaxLength="150" />
+    <Property Name="emergencyRefName2" Type="varchar" MaxLength="80" />
+    <Property Name="emeregencyArea2" Type="varchar" MaxLength="150" />
+    <Property Name="emergencyRefMobNo2" Type="varchar" MaxLength="20" />
+    <Property Name="emergencyRefRelationship2" Type="varchar" MaxLength="30" />
+    <Property Name="emergencyRefLandLineNo2" Type="varchar" MaxLength="20" />
+    <Property Name="familyDoctorName" Type="varchar" MaxLength="80" />
+    <Property Name="familyDoctorMobileNumber" Type="varchar" MaxLength="20" />
+    <Property Name="emergencyRefName3" Type="varchar" MaxLength="80" />
+    <Property Name="emeregencyArea3" Type="varchar" MaxLength="150" />
+    <Property Name="emergencyRefLandLineNo3" Type="varchar" MaxLength="20" />
+    <Property Name="emergencyRefMobNo3" Type="varchar" MaxLength="20" />
+    <Property Name="emergencyRefRelationship3" Type="varchar" MaxLength="30" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DisclaimerQuestionAnswers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="disclaimerId" Type="bigint" Nullable="false" />
+    <Property Name="questionId" Type="bigint" Nullable="false" />
+    <Property Name="optionId" Type="bigint" />
+    <Property Name="answerText" Type="varchar(max)" />
+    <Property Name="comment" Type="varchar(max)" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DisclaimerQuestionOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="options" Type="varchar(max)" Nullable="false" />
+    <Property Name="questionId" Type="bigint" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DisclaimerQuestionsMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="questions" Type="varchar(max)" Nullable="false" />
+    <Property Name="questionTypeId" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="varchar(max)" />
+    <Property Name="QuestionId" Type="bigint" />
+    <Property Name="OptionId" Type="bigint" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DowngradeTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="schemeId" Type="bigint" Nullable="false" />
+    <Property Name="diffAmt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="paidAmt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="remAmt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="payMode" Type="bigint" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="chequeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="bankName" Type="varchar" MaxLength="50" />
+    <Property Name="branchDetails" Type="varchar(max)" />
+    <Property Name="isReturn" Type="bit" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DuePaymentHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="agreementNumber" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="varchar(max)" />
+    <Property Name="payMode" Type="varchar" MaxLength="50" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="chequeNumber" Type="varchar" MaxLength="50" />
+    <Property Name="BankName" Type="varchar(max)" />
+    <Property Name="Branch" Type="varchar" MaxLength="150" />
+    <Property Name="activationDate" Type="datetime" />
+    <Property Name="MembershipAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="remainingAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PaidAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DueDate" Type="datetime" />
+    <Property Name="finalAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PackageName" Type="varchar" MaxLength="150" />
+    <Property Name="Duration" Type="varchar" MaxLength="50" />
+    <Property Name="PaymentDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ExerciseCardMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bodyTypeId" Type="int" />
+    <Property Name="exerciseId" Type="bigint" />
+    <Property Name="exerciseTypeId" Type="int" />
+    <Property Name="duration" Type="varchar" MaxLength="50" />
+    <Property Name="RPM" Type="varchar" MaxLength="50" />
+    <Property Name="Resistence" Type="varchar" MaxLength="50" />
+    <Property Name="Calories" Type="varchar" MaxLength="50" />
+    <Property Name="Distance" Type="varchar" MaxLength="50" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExerciseMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="exerciseName" Type="varchar(max)" />
+    <Property Name="exerciseTypeId" Type="int" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="isPersonalTrainingPackAllow" Type="bit" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExrciseCardLevelSets">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="exrciseCardId" Type="bigint" Nullable="false" />
+    <Property Name="levelId" Type="int" Nullable="false" />
+    <Property Name="set1" Type="varchar" MaxLength="70" />
+    <Property Name="set2" Type="varchar" MaxLength="70" />
+    <Property Name="set3" Type="varchar" MaxLength="70" />
+    <Property Name="set4" Type="varchar" MaxLength="70" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Facility">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="facilityName" Type="varchar(max)" Nullable="false" />
+    <Property Name="image" Type="varchar(max)" Nullable="false" />
+    <Property Name="description" Type="varchar(max)" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FreeTrial">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Contact" Type="varchar" MaxLength="50" />
+    <Property Name="TrialMessage" Type="varchar(max)" />
+    <Property Name="FitnessGoal" Type="varchar" MaxLength="50" />
+    <Property Name="insertedDate" Type="datetime" Nullable="false" />
+    <Property Name="TrialDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GroupMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HomepageSlider">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="imagePath" Type="varchar(max)" Nullable="false" />
+    <Property Name="imageName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="isDisplayed" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="updatedDate" Type="datetime" />
+    <Property Name="insertedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ItemMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="mrp" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="groupId" Type="bigint" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeadAppointments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="appointmentDate" Type="datetime" Nullable="false" />
+    <Property Name="leadId" Type="bigint" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="userId" Type="bigint" Nullable="false" />
+    <Property Name="isAttendAppointment" Type="bit" />
+    <Property Name="reasonForNotAttend" Type="varchar(max)" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeadFollowups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="followupDateTime" Type="datetime" Nullable="false" />
+    <Property Name="leadId" Type="bigint" Nullable="false" />
+    <Property Name="appoinmentId" Type="bigint" />
+    <Property Name="presentationId" Type="bigint" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeadPresentations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="presentationDate" Type="datetime" Nullable="false" />
+    <Property Name="leadId" Type="bigint" Nullable="false" />
+    <Property Name="appointmentId" Type="bigint" />
+    <Property Name="userId" Type="bigint" Nullable="false" />
+    <Property Name="isAttendPresentation" Type="bit" />
+    <Property Name="reasonsForNotAttend" Type="varchar(max)" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeadQuestionAnswers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="leadId" Type="bigint" Nullable="false" />
+    <Property Name="questionId" Type="bigint" Nullable="false" />
+    <Property Name="optionId" Type="bigint" />
+    <Property Name="answerText" Type="varchar(max)" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeadQuestionOptions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="options" Type="varchar(max)" Nullable="false" />
+    <Property Name="questionId" Type="bigint" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeadQuestionsMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="questions" Type="varchar(max)" Nullable="false" />
+    <Property Name="questionTypeId" Type="int" Nullable="false" />
+    <Property Name="QuestionId" Type="bigint" />
+    <Property Name="SuperQuestionId" Type="nvarchar" MaxLength="50" />
+    <Property Name="OptionId" Type="bigint" />
+    <Property Name="PageId" Type="bigint" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Leads">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="gender" Type="varchar" MaxLength="10" />
+    <Property Name="dateOfBirth" Type="datetime" />
+    <Property Name="address" Type="varchar(max)" />
+    <Property Name="city" Type="varchar" MaxLength="100" />
+    <Property Name="pincode" Type="varchar" MaxLength="20" />
+    <Property Name="mobileNumber" Type="varchar" MaxLength="20" />
+    <Property Name="otherContactNumber" Type="varchar" MaxLength="20" />
+    <Property Name="bestTimeToCall" Type="varchar" MaxLength="20" />
+    <Property Name="responseTypeId" Type="int" />
+    <Property Name="leadTypeId" Type="bigint" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="userId" Type="bigint" Nullable="false" />
+    <Property Name="maritalStatus" Type="varchar" MaxLength="10" />
+    <Property Name="anniversaryDate" Type="datetime" />
+    <Property Name="occupation" Type="varchar" MaxLength="150" />
+    <Property Name="employee" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar(max)" />
+    <Property Name="agreementNumber" Type="varchar" MaxLength="50" />
+    <Property Name="memberShipId" Type="varchar" MaxLength="50" />
+    <Property Name="relationWtihMember" Type="varchar" MaxLength="50" />
+    <Property Name="corporateId" Type="varchar(max)" />
+    <Property Name="companyName" Type="varchar" MaxLength="100" />
+    <Property Name="leadStatusId" Type="bigint" />
+    <Property Name="isTransfer" Type="bit" Nullable="false" />
+    <Property Name="transferTo" Type="bigint" />
+    <Property Name="transferBy" Type="bigint" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeadStatusMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeadTransactions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="leadId" Type="bigint" />
+    <Property Name="clubId" Type="bigint" />
+    <Property Name="currantLeadStatusId" Type="bigint" />
+    <Property Name="prevLeadStatusId" Type="bigint" />
+    <Property Name="insertDate" Type="datetime" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="LeadTypeMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="leadType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MeasurementMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="WEIGHT" Type="varchar" MaxLength="50" />
+    <Property Name="HEIGHT" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="FAT" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="BMI" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="BMR" Type="varchar" MaxLength="50" />
+    <Property Name="NECK" Type="varchar" MaxLength="50" />
+    <Property Name="SHOULDER" Type="varchar" MaxLength="50" />
+    <Property Name="CHEST" Type="varchar" MaxLength="50" />
+    <Property Name="ARMS" Type="varchar" MaxLength="50" />
+    <Property Name="WAIST" Type="varchar" MaxLength="50" />
+    <Property Name="HIPS" Type="varchar" MaxLength="50" />
+    <Property Name="THIGH" Type="varchar" MaxLength="50" />
+    <Property Name="CALF" Type="varchar" MaxLength="50" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MemberItemSales">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="itemId" Type="bigint" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="amount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="totalAmount" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="memberFinalSaleID" Type="bigint" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MemberItemTotalSales">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="totalAmount" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="discount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="finalAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="amountPaid" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="remAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="payMode" Type="int" />
+    <Property Name="chequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="BankName" Type="varchar" MaxLength="50" />
+    <Property Name="BranchName" Type="varchar(max)" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="isPaid" Type="bit" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MemberJuiceMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="rechargeAmount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="validDays" Type="int" Nullable="false" />
+    <Property Name="startDate" Type="datetime" Nullable="false" />
+    <Property Name="endDate" Type="datetime" Nullable="false" />
+    <Property Name="discount" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="finalAmount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="availableAmount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="amountPaid" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="remAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="chequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="BankName" Type="varchar" MaxLength="50" />
+    <Property Name="BranchName" Type="varchar(max)" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="payMode" Type="int" />
+    <Property Name="isPaid" Type="bit" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MemberJuiceTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="itemId" Type="bigint" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="amount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="totalAmount" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Memberships">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="leadId" Type="bigint" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="packageTypeId" Type="bigint" Nullable="false" />
+    <Property Name="packageAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="schemeID" Type="bigint" Nullable="false" />
+    <Property Name="schemeAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="joiningFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="adminFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="membershipFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="personalTrainingPack" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="serviceTaxInPercentage" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="discountGivenBy" Type="bigint" Nullable="false" />
+    <Property Name="finalAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="chequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="BankName" Type="varchar" MaxLength="50" />
+    <Property Name="Branch" Type="varchar(max)" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="activationDate" Type="datetime" />
+    <Property Name="registrationDate" Type="datetime" />
+    <Property Name="RFIDCardNumber" Type="varchar" MaxLength="50" />
+    <Property Name="membershipUniqueId" Type="varchar(max)" />
+    <Property Name="agreementNumber" Type="varchar(max)" />
+    <Property Name="consult" Type="varchar" MaxLength="50" />
+    <Property Name="branchName" Type="varchar" MaxLength="50" />
+    <Property Name="profilePhoto" Type="varchar(max)" />
+    <Property Name="expiryDate" Type="datetime" />
+    <Property Name="sendMaterialsBy" Type="varchar" MaxLength="50" />
+    <Property Name="payMode" Type="int" />
+    <Property Name="guardianName" Type="varchar(max)" />
+    <Property Name="relationshipOfGuardian" Type="varchar(max)" />
+    <Property Name="guardianSignature" Type="varchar(max)" />
+    <Property Name="companySignature" Type="varchar" MaxLength="50" />
+    <Property Name="memberSiganture" Type="varbinary" MaxLength="50" />
+    <Property Name="corporateName" Type="varchar(max)" />
+    <Property Name="corporateId" Type="varchar" MaxLength="50" />
+    <Property Name="corporationSignature" Type="varchar" MaxLength="50" />
+    <Property Name="emergencyContactName" Type="varchar" MaxLength="50" />
+    <Property Name="emergencyContactNumber" Type="varchar" MaxLength="20" />
+    <Property Name="amountPaid" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="remainingAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="isPaid" Type="bit" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modules">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="moduleName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PackageMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="packageName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="durationInMonths" Type="int" Nullable="false" />
+    <Property Name="joiningFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="adminFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="membershipFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="personalTrainingPack" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="serviceTaxInPercentage" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="finalAmount" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PageMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="pageCategoryId" Type="int" />
+    <Property Name="pageName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="pageURL" Type="varchar" MaxLength="150" />
+    <Property Name="MenuLI" Type="varchar" MaxLength="100" />
+    <Property Name="MenuLICSSClass" Type="varchar" MaxLength="100" />
+    <Property Name="moduleId" Type="int" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="leadId" Type="bigint" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="packageTypeId" Type="bigint" Nullable="false" />
+    <Property Name="packageAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="schemeID" Type="bigint" Nullable="false" />
+    <Property Name="schemeAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="joiningFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="adminFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="membershipFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="personalTrainingPack" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="serviceTaxInPercentage" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="discountGivenBy" Type="bigint" Nullable="false" />
+    <Property Name="finalAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="chequeNumber" Type="varchar" MaxLength="20" />
+    <Property Name="BankName" Type="varchar" MaxLength="50" />
+    <Property Name="Branch" Type="varchar(max)" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="activationDate" Type="datetime" />
+    <Property Name="registrationDate" Type="datetime" />
+    <Property Name="RFIDCardNumber" Type="varchar" MaxLength="50" />
+    <Property Name="membershipUniqueId" Type="varchar(max)" />
+    <Property Name="agreementNumber" Type="varchar(max)" />
+    <Property Name="consult" Type="varchar" MaxLength="50" />
+    <Property Name="branchName" Type="varchar" MaxLength="50" />
+    <Property Name="expiryDate" Type="datetime" />
+    <Property Name="payMode" Type="int" />
+    <Property Name="amountPaid" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="remainingAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="ReceiptDate" Type="datetime" />
+    <Property Name="ReceiptNumber" Type="int" />
+    <Property Name="DueAmountDate" Type="datetime" />
+    <Property Name="isPaid" Type="bit" />
+    <Property Name="insertDate" Type="datetime" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="isFullPaid" Type="bit" />
+  </EntityType>
+  <EntityType Name="PTPMemberMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PTPPackageID" Type="bigint" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="startDate" Type="datetime" Nullable="false" />
+    <Property Name="endDate" Type="datetime" Nullable="false" />
+    <Property Name="sessionCount" Type="bigint" Nullable="false" />
+    <Property Name="amount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="payMode" Type="bigint" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="chequeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="bankName" Type="varchar" MaxLength="50" />
+    <Property Name="branchDetails" Type="varchar(max)" />
+    <Property Name="isPaid" Type="bit" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PTPMemberTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="PTPMemberMasterId" Type="bigint" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PTPPackageMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="packageName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fees" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="validDays" Type="bigint" Nullable="false" />
+    <Property Name="noOfSessions" Type="bigint" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TimeTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="startDate" Type="datetime" Nullable="false" />
+    <Property Name="endDate" Type="datetime" Nullable="false" />
+    <Property Name="days" Type="bigint" Nullable="false" />
+    <Property Name="amtPaid" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="payMode" Type="bigint" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="chequeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="bankName" Type="varchar" MaxLength="50" />
+    <Property Name="branchDetails" Type="varchar(max)" />
+    <Property Name="isPaid" Type="bit" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TowelHiringMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="towelPackageId" Type="bigint" Nullable="false" />
+    <Property Name="startDate" Type="datetime" Nullable="false" />
+    <Property Name="endDate" Type="datetime" Nullable="false" />
+    <Property Name="isPaid" Type="bit" Nullable="false" />
+    <Property Name="paymentMode" Type="bigint" />
+    <Property Name="amount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="chequeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="bankName" Type="varchar" MaxLength="50" />
+    <Property Name="branchDetails" Type="varchar(max)" />
+    <Property Name="hiringTimeUpdate" Type="int" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TowelHiringPackage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="packageName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="amount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="numberOfDays" Type="int" Nullable="false" />
+    <Property Name="hiringTime" Type="int" Nullable="false" />
+    <Property Name="depositAmount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TowelTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="towelHiriningId" Type="bigint" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="depositAmount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="isTowelGiven" Type="bit" Nullable="false" />
+    <Property Name="isTowelReturn" Type="bit" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UpgradeTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="memberId" Type="bigint" Nullable="false" />
+    <Property Name="schemeId" Type="bigint" Nullable="false" />
+    <Property Name="diffAmt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="paidAmt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="remAmt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="payMode" Type="bigint" />
+    <Property Name="chequeDate" Type="datetime" />
+    <Property Name="chequeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="bankName" Type="varchar" MaxLength="50" />
+    <Property Name="branchDetails" Type="varchar(max)" />
+    <Property Name="isPaid" Type="bit" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="email" Type="varchar(max)" />
+    <Property Name="profilePicture" Type="varchar(max)" />
+    <Property Name="username" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="mobileNumber" Type="varchar" MaxLength="20" />
+    <Property Name="address" Type="varchar(max)" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="userTypeId" Type="bigint" Nullable="false" />
+    <Property Name="memberId" Type="bigint" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSchemeMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PackageId" Type="bigint" Nullable="false" />
+    <Property Name="schemeName" Type="varchar" MaxLength="150" />
+    <Property Name="additionalExpense" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="joiningFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="adminFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="membershipFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="personalTrainingPack" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="serviceTaxInPercentage" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="totalAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="endDate" Type="datetime" />
+    <Property Name="startTime" Type="varchar" MaxLength="50" />
+    <Property Name="endTime" Type="varchar" MaxLength="50" />
+    <Property Name="isAllowCancelation" Type="bit" />
+    <Property Name="CancelDays" Type="bigint" />
+    <Property Name="UpgradeDays" Type="bigint" />
+    <Property Name="DowngradeDays" Type="bigint" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSchemeTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userSchemeId" Type="bigint" />
+    <Property Name="joiningFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="adminFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="membershipFee" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="personalTrainingPack" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="serviceTaxInPercentage" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="totalAmount" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="userTypeId" Type="bigint" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserTargets">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clubId" Type="bigint" Nullable="false" />
+    <Property Name="userId" Type="bigint" Nullable="false" />
+    <Property Name="leadTypeId" Type="bigint" Nullable="false" />
+    <Property Name="target" Type="int" Nullable="false" />
+    <Property Name="fromDate" Type="datetime" Nullable="false" />
+    <Property Name="toDate" Type="datetime" Nullable="false" />
+    <Property Name="targetBy" Type="bigint" />
+    <Property Name="targetUpdateBy" Type="bigint" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserTypeMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VirtualVideos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+    <Property Name="path" Type="varchar(max)" Nullable="false" />
+    <Property Name="ContentType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="insertDate" Type="datetime" Nullable="false" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="deleteDate" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AccessMaster_PageMaster">
+    <End Role="PageMaster" Type="Self.PageMaster" Multiplicity="1" />
+    <End Role="AccessMaster" Type="Self.AccessMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PageMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AccessMaster">
+        <PropertyRef Name="pageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssignExercise_ExerciseCardMaster">
+    <End Role="ExerciseCardMaster" Type="Self.ExerciseCardMaster" Multiplicity="0..1" />
+    <End Role="AssignExercise" Type="Self.AssignExercise" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExerciseCardMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AssignExercise">
+        <PropertyRef Name="exerciseCardMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CancellationMaster_UserSchemeMaster">
+    <End Role="UserSchemeMaster" Type="Self.UserSchemeMaster" Multiplicity="1" />
+    <End Role="CancellationMaster" Type="Self.CancellationMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSchemeMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CancellationMaster">
+        <PropertyRef Name="schemeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CancellationTransaction_UserSchemeMaster">
+    <End Role="UserSchemeMaster" Type="Self.UserSchemeMaster" Multiplicity="1" />
+    <End Role="CancellationTransaction" Type="Self.CancellationTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSchemeMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CancellationTransaction">
+        <PropertyRef Name="schemeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DisclaimerQuestionAnswers_DisclaimerQuestionOptions">
+    <End Role="DisclaimerQuestionOptions" Type="Self.DisclaimerQuestionOptions" Multiplicity="0..1" />
+    <End Role="DisclaimerQuestionAnswers" Type="Self.DisclaimerQuestionAnswers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DisclaimerQuestionOptions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DisclaimerQuestionAnswers">
+        <PropertyRef Name="optionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DisclaimerQuestionAnswers_DisclaimerQuestionsMaster">
+    <End Role="DisclaimerQuestionsMaster" Type="Self.DisclaimerQuestionsMaster" Multiplicity="1" />
+    <End Role="DisclaimerQuestionAnswers" Type="Self.DisclaimerQuestionAnswers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DisclaimerQuestionsMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DisclaimerQuestionAnswers">
+        <PropertyRef Name="questionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DisclaimerQuestionOptions_DisclaimerQuestionsMaster">
+    <End Role="DisclaimerQuestionsMaster" Type="Self.DisclaimerQuestionsMaster" Multiplicity="1" />
+    <End Role="DisclaimerQuestionOptions" Type="Self.DisclaimerQuestionOptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DisclaimerQuestionsMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DisclaimerQuestionOptions">
+        <PropertyRef Name="questionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DisclaimerQuestionsMaster_DisclaimerQuestionOptions">
+    <End Role="DisclaimerQuestionOptions" Type="Self.DisclaimerQuestionOptions" Multiplicity="0..1" />
+    <End Role="DisclaimerQuestionsMaster" Type="Self.DisclaimerQuestionsMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DisclaimerQuestionOptions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DisclaimerQuestionsMaster">
+        <PropertyRef Name="OptionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DisclaimerQuestionsMaster_DisclaimerQuestionsMaster">
+    <End Role="DisclaimerQuestionsMaster" Type="Self.DisclaimerQuestionsMaster" Multiplicity="0..1" />
+    <End Role="DisclaimerQuestionsMaster1" Type="Self.DisclaimerQuestionsMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DisclaimerQuestionsMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DisclaimerQuestionsMaster1">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DowngradeTransaction_UserSchemeMaster">
+    <End Role="UserSchemeMaster" Type="Self.UserSchemeMaster" Multiplicity="1" />
+    <End Role="DowngradeTransaction" Type="Self.DowngradeTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSchemeMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DowngradeTransaction">
+        <PropertyRef Name="schemeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExerciseCardMaster_Exercise Master">
+    <End Role="ExerciseMaster" Type="Self.ExerciseMaster" Multiplicity="0..1" />
+    <End Role="ExerciseCardMaster" Type="Self.ExerciseCardMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExerciseMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExerciseCardMaster">
+        <PropertyRef Name="exerciseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExrciseCardLevelSets_ExerciseCardMaster">
+    <End Role="ExerciseCardMaster" Type="Self.ExerciseCardMaster" Multiplicity="1" />
+    <End Role="ExrciseCardLevelSets" Type="Self.ExrciseCardLevelSets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExerciseCardMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExrciseCardLevelSets">
+        <PropertyRef Name="exrciseCardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemMaster_GroupMaster">
+    <End Role="GroupMaster" Type="Self.GroupMaster" Multiplicity="1" />
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ItemMaster">
+        <PropertyRef Name="groupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadAppointments_Leads">
+    <End Role="Leads" Type="Self.Leads" Multiplicity="1" />
+    <End Role="LeadAppointments" Type="Self.LeadAppointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadAppointments">
+        <PropertyRef Name="leadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadFollowups_LeadAppointments">
+    <End Role="LeadAppointments" Type="Self.LeadAppointments" Multiplicity="0..1" />
+    <End Role="LeadFollowups" Type="Self.LeadFollowups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadAppointments">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadFollowups">
+        <PropertyRef Name="appoinmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadFollowups_LeadPresentations">
+    <End Role="LeadPresentations" Type="Self.LeadPresentations" Multiplicity="0..1" />
+    <End Role="LeadFollowups" Type="Self.LeadFollowups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadPresentations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadFollowups">
+        <PropertyRef Name="presentationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadFollowups_Leads">
+    <End Role="Leads" Type="Self.Leads" Multiplicity="1" />
+    <End Role="LeadFollowups" Type="Self.LeadFollowups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadFollowups">
+        <PropertyRef Name="leadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadPresentations_LeadAppointments">
+    <End Role="LeadAppointments" Type="Self.LeadAppointments" Multiplicity="0..1" />
+    <End Role="LeadPresentations" Type="Self.LeadPresentations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadAppointments">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadPresentations">
+        <PropertyRef Name="appointmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadPresentations_Leads">
+    <End Role="Leads" Type="Self.Leads" Multiplicity="1" />
+    <End Role="LeadPresentations" Type="Self.LeadPresentations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadPresentations">
+        <PropertyRef Name="leadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadQuestionAnswers_LeadQuestionOptions">
+    <End Role="LeadQuestionOptions" Type="Self.LeadQuestionOptions" Multiplicity="0..1" />
+    <End Role="LeadQuestionAnswers" Type="Self.LeadQuestionAnswers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadQuestionOptions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadQuestionAnswers">
+        <PropertyRef Name="optionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadQuestionAnswers_LeadQuestions">
+    <End Role="LeadQuestionsMaster" Type="Self.LeadQuestionsMaster" Multiplicity="1" />
+    <End Role="LeadQuestionAnswers" Type="Self.LeadQuestionAnswers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadQuestionsMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadQuestionAnswers">
+        <PropertyRef Name="questionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadQuestionAnswers_Leads">
+    <End Role="Leads" Type="Self.Leads" Multiplicity="1" />
+    <End Role="LeadQuestionAnswers" Type="Self.LeadQuestionAnswers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadQuestionAnswers">
+        <PropertyRef Name="leadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadQuestionOptions_LeadQuestionOptions">
+    <End Role="LeadQuestionsMaster" Type="Self.LeadQuestionsMaster" Multiplicity="1" />
+    <End Role="LeadQuestionOptions" Type="Self.LeadQuestionOptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadQuestionsMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadQuestionOptions">
+        <PropertyRef Name="questionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadQuestionsMaster_LeadQuestionOptions">
+    <End Role="LeadQuestionOptions" Type="Self.LeadQuestionOptions" Multiplicity="0..1" />
+    <End Role="LeadQuestionsMaster" Type="Self.LeadQuestionsMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadQuestionOptions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadQuestionsMaster">
+        <PropertyRef Name="OptionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadQuestionsMaster_LeadQuestionsMaster">
+    <End Role="LeadQuestionsMaster" Type="Self.LeadQuestionsMaster" Multiplicity="0..1" />
+    <End Role="LeadQuestionsMaster1" Type="Self.LeadQuestionsMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadQuestionsMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadQuestionsMaster1">
+        <PropertyRef Name="QuestionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Leads_LeadStatusMaster">
+    <End Role="LeadStatusMaster" Type="Self.LeadStatusMaster" Multiplicity="0..1" />
+    <End Role="Leads" Type="Self.Leads" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadStatusMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Leads">
+        <PropertyRef Name="leadStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Leads_LeadTypeMaster">
+    <End Role="LeadTypeMaster" Type="Self.LeadTypeMaster" Multiplicity="1" />
+    <End Role="Leads" Type="Self.Leads" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadTypeMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Leads">
+        <PropertyRef Name="leadTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadTransactions_Leads">
+    <End Role="Leads" Type="Self.Leads" Multiplicity="0..1" />
+    <End Role="LeadTransactions" Type="Self.LeadTransactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadTransactions">
+        <PropertyRef Name="leadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadTransactions_LeadStatusMaster">
+    <End Role="LeadStatusMaster" Type="Self.LeadStatusMaster" Multiplicity="0..1" />
+    <End Role="LeadTransactions" Type="Self.LeadTransactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadStatusMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadTransactions">
+        <PropertyRef Name="currantLeadStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeadTransactions_LeadStatusMaster1">
+    <End Role="LeadStatusMaster" Type="Self.LeadStatusMaster" Multiplicity="0..1" />
+    <End Role="LeadTransactions" Type="Self.LeadTransactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadStatusMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LeadTransactions">
+        <PropertyRef Name="prevLeadStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberItemSales_ItemMaster">
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="1" />
+    <End Role="MemberItemSales" Type="Self.MemberItemSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberItemSales">
+        <PropertyRef Name="itemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberItemSales_MemberItemTotalSales">
+    <End Role="MemberItemTotalSales" Type="Self.MemberItemTotalSales" Multiplicity="1" />
+    <End Role="MemberItemSales" Type="Self.MemberItemSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MemberItemTotalSales">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberItemSales">
+        <PropertyRef Name="memberFinalSaleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberJuiceTransaction_ItemMaster">
+    <End Role="ItemMaster" Type="Self.ItemMaster" Multiplicity="1" />
+    <End Role="MemberJuiceTransaction" Type="Self.MemberJuiceTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberJuiceTransaction">
+        <PropertyRef Name="itemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Memberships_Leads">
+    <End Role="Leads" Type="Self.Leads" Multiplicity="1" />
+    <End Role="Memberships" Type="Self.Memberships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Memberships">
+        <PropertyRef Name="leadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Memberships_PackageMaster">
+    <End Role="PackageMaster" Type="Self.PackageMaster" Multiplicity="1" />
+    <End Role="Memberships" Type="Self.Memberships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PackageMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Memberships">
+        <PropertyRef Name="packageTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Memberships_UserSchemeMaster">
+    <End Role="UserSchemeMaster" Type="Self.UserSchemeMaster" Multiplicity="1" />
+    <End Role="Memberships" Type="Self.Memberships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSchemeMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Memberships">
+        <PropertyRef Name="schemeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Clubs">
+    <End Role="Clubs" Type="Self.Clubs" Multiplicity="1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clubs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="clubId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Leads">
+    <End Role="Leads" Type="Self.Leads" Multiplicity="1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Leads">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="leadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_PackageMaster">
+    <End Role="PackageMaster" Type="Self.PackageMaster" Multiplicity="1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PackageMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="packageTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_UserSchemeMaster">
+    <End Role="UserSchemeMaster" Type="Self.UserSchemeMaster" Multiplicity="1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSchemeMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="schemeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PTPMemberMaster_PTPPackageMaster">
+    <End Role="PTPPackageMaster" Type="Self.PTPPackageMaster" Multiplicity="1" />
+    <End Role="PTPMemberMaster" Type="Self.PTPMemberMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PTPPackageMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PTPMemberMaster">
+        <PropertyRef Name="PTPPackageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PTPMemberTransaction_PTPMemberMaster">
+    <End Role="PTPMemberMaster" Type="Self.PTPMemberMaster" Multiplicity="1" />
+    <End Role="PTPMemberTransaction" Type="Self.PTPMemberTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PTPMemberMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PTPMemberTransaction">
+        <PropertyRef Name="PTPMemberMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TowelHiringMaster_TowelHiringPackage">
+    <End Role="TowelHiringPackage" Type="Self.TowelHiringPackage" Multiplicity="1" />
+    <End Role="TowelHiringMaster" Type="Self.TowelHiringMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TowelHiringPackage">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TowelHiringMaster">
+        <PropertyRef Name="towelPackageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TowelTransaction_TowelHiringMaster">
+    <End Role="TowelHiringMaster" Type="Self.TowelHiringMaster" Multiplicity="1" />
+    <End Role="TowelTransaction" Type="Self.TowelTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TowelHiringMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TowelTransaction">
+        <PropertyRef Name="towelHiriningId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UpgradeTransaction_UserSchemeMaster">
+    <End Role="UserSchemeMaster" Type="Self.UserSchemeMaster" Multiplicity="1" />
+    <End Role="UpgradeTransaction" Type="Self.UpgradeTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSchemeMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UpgradeTransaction">
+        <PropertyRef Name="schemeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSchemeMaster_PackageMaster">
+    <End Role="PackageMaster" Type="Self.PackageMaster" Multiplicity="1" />
+    <End Role="UserSchemeMaster" Type="Self.UserSchemeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PackageMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserSchemeMaster">
+        <PropertyRef Name="PackageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSchemeTransaction_UserSchemeTransaction">
+    <End Role="UserSchemeMaster" Type="Self.UserSchemeMaster" Multiplicity="0..1" />
+    <End Role="UserSchemeTransaction" Type="Self.UserSchemeTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSchemeMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserSchemeTransaction">
+        <PropertyRef Name="userSchemeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTargets_LeadTypeMaster">
+    <End Role="LeadTypeMaster" Type="Self.LeadTypeMaster" Multiplicity="1" />
+    <End Role="UserTargets" Type="Self.UserTargets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeadTypeMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserTargets">
+        <PropertyRef Name="leadTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetAbsentMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetAchievedTargetByUserAndLeadtype" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USERID" Type="int" Mode="In" />
+    <Parameter Name="LEADTYPEID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetAgreementReceipt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+    <Parameter Name="agreementNumber" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Query" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetArobicExercise" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BodyType" Type="bigint" Mode="In" />
+    <Parameter Name="MemberId" Type="bigint" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetAssignedPTP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FULLNAME" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RFIDNO" Type="varchar(max)" Mode="In" />
+    <Parameter Name="MEMBERSHIPNO" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetAssignedTowel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SORTDIR" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RFIDNO" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FULLNAME" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetAssignedTransaction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PTPMEMBERID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetAssignExercise" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetAssignExerciseByMemberId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetClubs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FIRSTNAME" Type="varchar(max)" Mode="In" />
+    <Parameter Name="LASTNAME" Type="varchar(max)" Mode="In" />
+    <Parameter Name="DOB" Type="varchar(max)" Mode="In" />
+    <Parameter Name="MOBILENO" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RFIDNO" Type="varchar(max)" Mode="In" />
+    <Parameter Name="MEMBERSHIPNO" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetDiscalimersEntry" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+    <Parameter Name="MemberId" Type="bigint" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetExerciseMaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetExpiredMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetFreeTrial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+    <Parameter Name="Contact" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetFullPayment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="ClubId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetGroups" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NAME" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CODE" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NAME" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CODE" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetJuiceTrans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SORTDIR" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RFID" Type="varchar(max)" Mode="In" />
+    <Parameter Name="MEMBERNAME" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetLeads" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClubId" Type="bigint" Mode="In" />
+    <Parameter Name="FIRSTNAME" Type="varchar" Mode="In" />
+    <Parameter Name="LASTNAME" Type="varchar" Mode="In" />
+    <Parameter Name="MOBILENO" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="varchar" Mode="In" />
+    <Parameter Name="LEADSTATUS" Type="bigint" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+    <Parameter Name="USERID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetLeadTargetHeaders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+    <Parameter Name="USERTYPEID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetLeadTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetMembersByLeadID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetMembersFromAssignExercise" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FULLNAME" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetNonArobicExercise" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BodyType" Type="bigint" Mode="In" />
+    <Parameter Name="LevelId" Type="bigint" Mode="In" />
+    <Parameter Name="MEMBERID" Type="bigint" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetPackageMaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClubId" Type="bigint" Mode="In" />
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetPagePermissions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USERID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetPartPayment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="ClubId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetPaymentHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="AgreementNo" Type="varchar" Mode="In" />
+    <Parameter Name="ClubId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetPaymentReciept" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+    <Parameter Name="agreementNumber" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Query" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetPresentMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+    <Parameter Name="FromDate" Type="varchar" Mode="In" />
+    <Parameter Name="ToDate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetProductSales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SORTDIR" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RFID" Type="varchar(max)" Mode="In" />
+    <Parameter Name="MEMBERNAME" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetPTPPackages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PACKAGENAME" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetSalesLeads" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClubId" Type="bigint" Mode="In" />
+    <Parameter Name="FIRSTNAME" Type="varchar" Mode="In" />
+    <Parameter Name="LASTNAME" Type="varchar" Mode="In" />
+    <Parameter Name="MOBILENO" Type="varchar" Mode="In" />
+    <Parameter Name="AgreementNo" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetTowelPackage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SORTDIR" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar(max)" Mode="In" />
+    <Parameter Name="PACKAGENAME" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="RoleId" Type="bigint" Mode="In" />
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetUserSchemeMaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SchemeName" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+    <Parameter Name="CLUBID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetUserTargetByDateAndLeadType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LEADTYPEID" Type="bigint" Mode="In" />
+    <Parameter Name="USERID" Type="bigint" Mode="In" />
+    <Parameter Name="FROMDATE" Type="varchar" Mode="In" />
+    <Parameter Name="TODATE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetUserTargetsByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetUserTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="SORTFIELD" Type="varchar" Mode="In" />
+    <Parameter Name="SORTDIR" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="FitnessCenterModelStoreContainer">
+    <EntitySet Name="AboutUs" EntityType="Self.AboutUs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccessMaster" EntityType="Self.AccessMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AssignExercise" EntityType="Self.AssignExercise" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AttendenceManagement" EntityType="Self.AttendenceManagement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CancellationMaster" EntityType="Self.CancellationMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CancellationTransaction" EntityType="Self.CancellationTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Career" EntityType="Self.Career" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clubs" EntityType="Self.Clubs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Disclaimer" EntityType="Self.Disclaimer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DisclaimerQuestionAnswers" EntityType="Self.DisclaimerQuestionAnswers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DisclaimerQuestionOptions" EntityType="Self.DisclaimerQuestionOptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DisclaimerQuestionsMaster" EntityType="Self.DisclaimerQuestionsMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DowngradeTransaction" EntityType="Self.DowngradeTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DuePaymentHistory" EntityType="Self.DuePaymentHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExerciseCardMaster" EntityType="Self.ExerciseCardMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExerciseMaster" EntityType="Self.ExerciseMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExrciseCardLevelSets" EntityType="Self.ExrciseCardLevelSets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Facility" EntityType="Self.Facility" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FreeTrial" EntityType="Self.FreeTrial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupMaster" EntityType="Self.GroupMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HomepageSlider" EntityType="Self.HomepageSlider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemMaster" EntityType="Self.ItemMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeadAppointments" EntityType="Self.LeadAppointments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeadFollowups" EntityType="Self.LeadFollowups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeadPresentations" EntityType="Self.LeadPresentations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeadQuestionAnswers" EntityType="Self.LeadQuestionAnswers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeadQuestionOptions" EntityType="Self.LeadQuestionOptions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeadQuestionsMaster" EntityType="Self.LeadQuestionsMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Leads" EntityType="Self.Leads" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeadStatusMaster" EntityType="Self.LeadStatusMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeadTransactions" EntityType="Self.LeadTransactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeadTypeMaster" EntityType="Self.LeadTypeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MeasurementMaster" EntityType="Self.MeasurementMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemberItemSales" EntityType="Self.MemberItemSales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemberItemTotalSales" EntityType="Self.MemberItemTotalSales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemberJuiceMaster" EntityType="Self.MemberJuiceMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemberJuiceTransaction" EntityType="Self.MemberJuiceTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Memberships" EntityType="Self.Memberships" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modules" EntityType="Self.Modules" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PackageMaster" EntityType="Self.PackageMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PageMaster" EntityType="Self.PageMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PTPMemberMaster" EntityType="Self.PTPMemberMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PTPMemberTransaction" EntityType="Self.PTPMemberTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PTPPackageMaster" EntityType="Self.PTPPackageMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TimeTransaction" EntityType="Self.TimeTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TowelHiringMaster" EntityType="Self.TowelHiringMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TowelHiringPackage" EntityType="Self.TowelHiringPackage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TowelTransaction" EntityType="Self.TowelTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UpgradeTransaction" EntityType="Self.UpgradeTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserSchemeMaster" EntityType="Self.UserSchemeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserSchemeTransaction" EntityType="Self.UserSchemeTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTargets" EntityType="Self.UserTargets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTypeMaster" EntityType="Self.UserTypeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VirtualVideos" EntityType="Self.VirtualVideos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AccessMaster_PageMaster" Association="Self.FK_AccessMaster_PageMaster">
+      <End Role="PageMaster" EntitySet="PageMaster" />
+      <End Role="AccessMaster" EntitySet="AccessMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssignExercise_ExerciseCardMaster" Association="Self.FK_AssignExercise_ExerciseCardMaster">
+      <End Role="ExerciseCardMaster" EntitySet="ExerciseCardMaster" />
+      <End Role="AssignExercise" EntitySet="AssignExercise" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CancellationMaster_UserSchemeMaster" Association="Self.FK_CancellationMaster_UserSchemeMaster">
+      <End Role="UserSchemeMaster" EntitySet="UserSchemeMaster" />
+      <End Role="CancellationMaster" EntitySet="CancellationMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CancellationTransaction_UserSchemeMaster" Association="Self.FK_CancellationTransaction_UserSchemeMaster">
+      <End Role="UserSchemeMaster" EntitySet="UserSchemeMaster" />
+      <End Role="CancellationTransaction" EntitySet="CancellationTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DisclaimerQuestionAnswers_DisclaimerQuestionOptions" Association="Self.FK_DisclaimerQuestionAnswers_DisclaimerQuestionOptions">
+      <End Role="DisclaimerQuestionOptions" EntitySet="DisclaimerQuestionOptions" />
+      <End Role="DisclaimerQuestionAnswers" EntitySet="DisclaimerQuestionAnswers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DisclaimerQuestionAnswers_DisclaimerQuestionsMaster" Association="Self.FK_DisclaimerQuestionAnswers_DisclaimerQuestionsMaster">
+      <End Role="DisclaimerQuestionsMaster" EntitySet="DisclaimerQuestionsMaster" />
+      <End Role="DisclaimerQuestionAnswers" EntitySet="DisclaimerQuestionAnswers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DisclaimerQuestionOptions_DisclaimerQuestionsMaster" Association="Self.FK_DisclaimerQuestionOptions_DisclaimerQuestionsMaster">
+      <End Role="DisclaimerQuestionsMaster" EntitySet="DisclaimerQuestionsMaster" />
+      <End Role="DisclaimerQuestionOptions" EntitySet="DisclaimerQuestionOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DisclaimerQuestionsMaster_DisclaimerQuestionOptions" Association="Self.FK_DisclaimerQuestionsMaster_DisclaimerQuestionOptions">
+      <End Role="DisclaimerQuestionOptions" EntitySet="DisclaimerQuestionOptions" />
+      <End Role="DisclaimerQuestionsMaster" EntitySet="DisclaimerQuestionsMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DisclaimerQuestionsMaster_DisclaimerQuestionsMaster" Association="Self.FK_DisclaimerQuestionsMaster_DisclaimerQuestionsMaster">
+      <End Role="DisclaimerQuestionsMaster" EntitySet="DisclaimerQuestionsMaster" />
+      <End Role="DisclaimerQuestionsMaster1" EntitySet="DisclaimerQuestionsMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DowngradeTransaction_UserSchemeMaster" Association="Self.FK_DowngradeTransaction_UserSchemeMaster">
+      <End Role="UserSchemeMaster" EntitySet="UserSchemeMaster" />
+      <End Role="DowngradeTransaction" EntitySet="DowngradeTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExerciseCardMaster_Exercise Master" Association="Self.FK_ExerciseCardMaster_Exercise Master">
+      <End Role="ExerciseMaster" EntitySet="ExerciseMaster" />
+      <End Role="ExerciseCardMaster" EntitySet="ExerciseCardMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExrciseCardLevelSets_ExerciseCardMaster" Association="Self.FK_ExrciseCardLevelSets_ExerciseCardMaster">
+      <End Role="ExerciseCardMaster" EntitySet="ExerciseCardMaster" />
+      <End Role="ExrciseCardLevelSets" EntitySet="ExrciseCardLevelSets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemMaster_GroupMaster" Association="Self.FK_ItemMaster_GroupMaster">
+      <End Role="GroupMaster" EntitySet="GroupMaster" />
+      <End Role="ItemMaster" EntitySet="ItemMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadAppointments_Leads" Association="Self.FK_LeadAppointments_Leads">
+      <End Role="Leads" EntitySet="Leads" />
+      <End Role="LeadAppointments" EntitySet="LeadAppointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadFollowups_LeadAppointments" Association="Self.FK_LeadFollowups_LeadAppointments">
+      <End Role="LeadAppointments" EntitySet="LeadAppointments" />
+      <End Role="LeadFollowups" EntitySet="LeadFollowups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadFollowups_LeadPresentations" Association="Self.FK_LeadFollowups_LeadPresentations">
+      <End Role="LeadPresentations" EntitySet="LeadPresentations" />
+      <End Role="LeadFollowups" EntitySet="LeadFollowups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadFollowups_Leads" Association="Self.FK_LeadFollowups_Leads">
+      <End Role="Leads" EntitySet="Leads" />
+      <End Role="LeadFollowups" EntitySet="LeadFollowups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadPresentations_LeadAppointments" Association="Self.FK_LeadPresentations_LeadAppointments">
+      <End Role="LeadAppointments" EntitySet="LeadAppointments" />
+      <End Role="LeadPresentations" EntitySet="LeadPresentations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadPresentations_Leads" Association="Self.FK_LeadPresentations_Leads">
+      <End Role="Leads" EntitySet="Leads" />
+      <End Role="LeadPresentations" EntitySet="LeadPresentations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadQuestionAnswers_LeadQuestionOptions" Association="Self.FK_LeadQuestionAnswers_LeadQuestionOptions">
+      <End Role="LeadQuestionOptions" EntitySet="LeadQuestionOptions" />
+      <End Role="LeadQuestionAnswers" EntitySet="LeadQuestionAnswers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadQuestionAnswers_LeadQuestions" Association="Self.FK_LeadQuestionAnswers_LeadQuestions">
+      <End Role="LeadQuestionsMaster" EntitySet="LeadQuestionsMaster" />
+      <End Role="LeadQuestionAnswers" EntitySet="LeadQuestionAnswers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadQuestionAnswers_Leads" Association="Self.FK_LeadQuestionAnswers_Leads">
+      <End Role="Leads" EntitySet="Leads" />
+      <End Role="LeadQuestionAnswers" EntitySet="LeadQuestionAnswers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadQuestionOptions_LeadQuestionOptions" Association="Self.FK_LeadQuestionOptions_LeadQuestionOptions">
+      <End Role="LeadQuestionsMaster" EntitySet="LeadQuestionsMaster" />
+      <End Role="LeadQuestionOptions" EntitySet="LeadQuestionOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadQuestionsMaster_LeadQuestionOptions" Association="Self.FK_LeadQuestionsMaster_LeadQuestionOptions">
+      <End Role="LeadQuestionOptions" EntitySet="LeadQuestionOptions" />
+      <End Role="LeadQuestionsMaster" EntitySet="LeadQuestionsMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadQuestionsMaster_LeadQuestionsMaster" Association="Self.FK_LeadQuestionsMaster_LeadQuestionsMaster">
+      <End Role="LeadQuestionsMaster" EntitySet="LeadQuestionsMaster" />
+      <End Role="LeadQuestionsMaster1" EntitySet="LeadQuestionsMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Leads_LeadStatusMaster" Association="Self.FK_Leads_LeadStatusMaster">
+      <End Role="LeadStatusMaster" EntitySet="LeadStatusMaster" />
+      <End Role="Leads" EntitySet="Leads" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Leads_LeadTypeMaster" Association="Self.FK_Leads_LeadTypeMaster">
+      <End Role="LeadTypeMaster" EntitySet="LeadTypeMaster" />
+      <End Role="Leads" EntitySet="Leads" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadTransactions_Leads" Association="Self.FK_LeadTransactions_Leads">
+      <End Role="Leads" EntitySet="Leads" />
+      <End Role="LeadTransactions" EntitySet="LeadTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadTransactions_LeadStatusMaster" Association="Self.FK_LeadTransactions_LeadStatusMaster">
+      <End Role="LeadStatusMaster" EntitySet="LeadStatusMaster" />
+      <End Role="LeadTransactions" EntitySet="LeadTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeadTransactions_LeadStatusMaster1" Association="Self.FK_LeadTransactions_LeadStatusMaster1">
+      <End Role="LeadStatusMaster" EntitySet="LeadStatusMaster" />
+      <End Role="LeadTransactions" EntitySet="LeadTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberItemSales_ItemMaster" Association="Self.FK_MemberItemSales_ItemMaster">
+      <End Role="ItemMaster" EntitySet="ItemMaster" />
+      <End Role="MemberItemSales" EntitySet="MemberItemSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberItemSales_MemberItemTotalSales" Association="Self.FK_MemberItemSales_MemberItemTotalSales">
+      <End Role="MemberItemTotalSales" EntitySet="MemberItemTotalSales" />
+      <End Role="MemberItemSales" EntitySet="MemberItemSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberJuiceTransaction_ItemMaster" Association="Self.FK_MemberJuiceTransaction_ItemMaster">
+      <End Role="ItemMaster" EntitySet="ItemMaster" />
+      <End Role="MemberJuiceTransaction" EntitySet="MemberJuiceTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Memberships_Leads" Association="Self.FK_Memberships_Leads">
+      <End Role="Leads" EntitySet="Leads" />
+      <End Role="Memberships" EntitySet="Memberships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Memberships_PackageMaster" Association="Self.FK_Memberships_PackageMaster">
+      <End Role="PackageMaster" EntitySet="PackageMaster" />
+      <End Role="Memberships" EntitySet="Memberships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Memberships_UserSchemeMaster" Association="Self.FK_Memberships_UserSchemeMaster">
+      <End Role="UserSchemeMaster" EntitySet="UserSchemeMaster" />
+      <End Role="Memberships" EntitySet="Memberships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Clubs" Association="Self.FK_Payment_Clubs">
+      <End Role="Clubs" EntitySet="Clubs" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Leads" Association="Self.FK_Payment_Leads">
+      <End Role="Leads" EntitySet="Leads" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_PackageMaster" Association="Self.FK_Payment_PackageMaster">
+      <End Role="PackageMaster" EntitySet="PackageMaster" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_UserSchemeMaster" Association="Self.FK_Payment_UserSchemeMaster">
+      <End Role="UserSchemeMaster" EntitySet="UserSchemeMaster" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PTPMemberMaster_PTPPackageMaster" Association="Self.FK_PTPMemberMaster_PTPPackageMaster">
+      <End Role="PTPPackageMaster" EntitySet="PTPPackageMaster" />
+      <End Role="PTPMemberMaster" EntitySet="PTPMemberMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PTPMemberTransaction_PTPMemberMaster" Association="Self.FK_PTPMemberTransaction_PTPMemberMaster">
+      <End Role="PTPMemberMaster" EntitySet="PTPMemberMaster" />
+      <End Role="PTPMemberTransaction" EntitySet="PTPMemberTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TowelHiringMaster_TowelHiringPackage" Association="Self.FK_TowelHiringMaster_TowelHiringPackage">
+      <End Role="TowelHiringPackage" EntitySet="TowelHiringPackage" />
+      <End Role="TowelHiringMaster" EntitySet="TowelHiringMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TowelTransaction_TowelHiringMaster" Association="Self.FK_TowelTransaction_TowelHiringMaster">
+      <End Role="TowelHiringMaster" EntitySet="TowelHiringMaster" />
+      <End Role="TowelTransaction" EntitySet="TowelTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UpgradeTransaction_UserSchemeMaster" Association="Self.FK_UpgradeTransaction_UserSchemeMaster">
+      <End Role="UserSchemeMaster" EntitySet="UserSchemeMaster" />
+      <End Role="UpgradeTransaction" EntitySet="UpgradeTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSchemeMaster_PackageMaster" Association="Self.FK_UserSchemeMaster_PackageMaster">
+      <End Role="PackageMaster" EntitySet="PackageMaster" />
+      <End Role="UserSchemeMaster" EntitySet="UserSchemeMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSchemeTransaction_UserSchemeTransaction" Association="Self.FK_UserSchemeTransaction_UserSchemeTransaction">
+      <End Role="UserSchemeMaster" EntitySet="UserSchemeMaster" />
+      <End Role="UserSchemeTransaction" EntitySet="UserSchemeTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTargets_LeadTypeMaster" Association="Self.FK_UserTargets_LeadTypeMaster">
+      <End Role="LeadTypeMaster" EntitySet="LeadTypeMaster" />
+      <End Role="UserTargets" EntitySet="UserTargets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
