@@ -129,3 +129,4 @@ G:\IntensityNew _db_model Updated\IntensityNew\FitnessCenter\obj\Debug\RdlCompil
 G:\IntensityNew _db_model Updated\IntensityNew\FitnessCenter\obj\Debug\RdlCompile.compiled
 G:\IntensityNew _db_model Updated\IntensityNew\FitnessCenter\obj\Debug\FitnessCenter.dll
 G:\IntensityNew _db_model Updated\IntensityNew\FitnessCenter\obj\Debug\FitnessCenter.pdb
+G:\IntensityNew _db_model Updated\IntensityNew\FitnessCenter\obj\Debug\FitnessCenter.csprojResolveAssemblyReference.cache

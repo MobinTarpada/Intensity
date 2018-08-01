@@ -103,6 +103,12 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DBModel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap1.css" />
+    <Content Include="assets\css\custom1.css" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\css\style1.css" />
+    <Content Include="assets\css\ValidationEngine.css" />
     <Content Include="assets\img\back.png" />
     <Content Include="assets\assets\css\accordion.css" />
     <Content Include="assets\assets\css\animate.min.css" />
@@ -781,6 +787,16 @@
     <Content Include="assets\img\works\img4.jpg" />
     <Content Include="assets\img\works\img5.jpg" />
     <Content Include="assets\img\works\img6.jpg" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\custom.js" />
+    <Content Include="assets\js\dataTables\dataTables.bootstrap.css" />
+    <Content Include="assets\js\dataTables\dataTables.bootstrap.js" />
+    <Content Include="assets\js\dataTables\jquery.dataTables.js" />
+    <Content Include="assets\js\jquery-1.10.2.js" />
+    <Content Include="assets\js\jquery.metisMenu.js" />
+    <Content Include="assets\js\morris\morris-0.4.3.min.css" />
+    <Content Include="assets\js\morris\morris.js" />
+    <Content Include="assets\js\morris\raphael-2.1.0.min.js" />
     <Content Include="assets\plugins\backstretch\jquery.backstretch.js" />
     <Content Include="assets\plugins\backstretch\jquery.backstretch.min.js" />
     <Content Include="assets\plugins\bootbox\bootbox.min.js" />
@@ -2240,6 +2256,7 @@
     <Content Include="App_Browsers\bin\office.xml" />
     <Content Include="App_Browsers\bin\wkhtmltopdf.exe" />
     <Content Include="AttendanceHistory.aspx" />
+    <Content Include="AttendenceManagement.aspx" />
     <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="bin\AjaxControlToolkit.HtmlEditor.Sanitizer.dll" />
     <Content Include="bin\EntityFramework.dll" />
@@ -2262,6 +2279,8 @@
     <Content Include="bin\wkhtmltopdf.exe" />
     <Content Include="Career.aspx" />
     <Content Include="ContactUs.aspx" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\style.css" />
     <Content Include="DailyTask.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Default1.aspx" />
@@ -2303,10 +2322,14 @@
     <Content Include="frmPymentGateway.aspx" />
     <Content Include="frmVirtualTour.aspx" />
     <Content Include="HomePage.aspx" />
+    <Content Include="js\jquery-2.1.4.min.js" />
+    <Content Include="js\jquery-3.1.1.js" />
+    <Content Include="js\jquery-ui.js" />
     <Content Include="JuiceTransaction.aspx" />
     <Content Include="ManageMembership.aspx" />
     <Content Include="ManagePackage.aspx" />
     <Content Include="ManageUserScheme.aspx" />
+    <Content Include="MemberProfilePicture\ProfileImage.png" />
     <Content Include="PackageAndSchemeReport.aspx" />
     <Content Include="PackageNSchemeAnalysis.aspx" />
     <Content Include="packages.config" />
@@ -2901,6 +2924,13 @@
     <Compile Include="AttendanceHistory.aspx.designer.cs">
       <DependentUpon>AttendanceHistory.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AttendenceManagement.aspx.cs">
+      <DependentUpon>AttendenceManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceManagement.aspx.designer.cs">
+      <DependentUpon>AttendenceManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Career.aspx.cs">
       <DependentUpon>Career.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2922,6 +2952,7 @@
     <Compile Include="DailyTask.aspx.designer.cs">
       <DependentUpon>DailyTask.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Database.cs" />
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
